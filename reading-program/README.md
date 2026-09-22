@@ -15,8 +15,8 @@
 
 ## What this is
 
-An automated run at Bradbury's program. A scheduled Routine fires once per day at
-**12:00 PM US Eastern** and emails one poem, one short story, and one essay. Each
+An automated run at Bradbury's program. A scheduled Routine fires once per night at
+**11:30 PM US Eastern** and emails one poem, one short story, and one essay. Each
 night is recorded in [`READING_LOG.md`](READING_LOG.md) so nothing repeats across
 the full thousand.
 
@@ -46,14 +46,15 @@ door, not enough to substitute for walking through it.
 
 ## Logistics
 
-- Schedule: `0 16 * * *` (UTC), which is noon Eastern during daylight saving time.
-  Eastern standard time shifts this to 11:00 AM; see the note below.
+- Schedule: `30 3 * * *` (UTC), which is 11:30 PM Eastern during daylight saving
+  time. Because 11:30 PM Eastern falls after midnight UTC, each run is stamped with
+  the following day's UTC date.
 - Delivery: email.
 - Log: `READING_LOG.md`, appended by each run, committed to this branch.
 
 ### Daylight saving
 
-Cron here is evaluated in UTC and has no notion of US daylight saving. `0 16 * * *`
-lands at noon Eastern from mid-March to early November and at 11:00 AM the rest of
-the year. Changing the Routine's cron to `0 17 * * *` at the November transition
-restores noon, and back to `0 16 * * *` in March.
+Cron here is evaluated in UTC and has no notion of US daylight saving. `30 3 * * *`
+lands at 11:30 PM Eastern from mid-March to early November and at 10:30 PM the rest
+of the year. Changing the Routine's cron to `30 4 * * *` at the November transition
+restores 11:30 PM, and back to `30 3 * * *` in March.
