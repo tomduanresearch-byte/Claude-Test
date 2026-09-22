@@ -16,9 +16,14 @@
 ## What this is
 
 An automated run at Bradbury's program. A scheduled Routine fires once per night at
-**11:30 PM US Eastern** and emails one poem, one short story, and one essay. Each
-night is recorded in [`READING_LOG.md`](READING_LOG.md) so nothing repeats across
-the full thousand.
+**11:30 PM US Eastern** and writes one poem, one short story, and one essay onto a
+private reading page:
+
+**https://claude.ai/artifact/RjtHMetrGCGWxkYgM41XPN**
+
+The page is also the program's memory. It carries the running log of every night,
+so nothing repeats across the full thousand, and the last thirty nights stay
+readable in an archive below the current one.
 
 ## The rules the nightly run follows
 
@@ -35,10 +40,15 @@ and no field more than roughly once a fortnight.
 dynasty through Shakespeare, Pope, and Frost to living poets. Short stories span
 Chekhov to Borges to now. The program is not a Western-canon tour.
 
-**Full text where the law allows it.** Public-domain work (published before 1931
-in the US, or otherwise free) is delivered complete — the reading should require
-no second step. Work still in copyright gets a short excerpt, real context, and a
-pointer to where to find it.
+**The poem whole, the prose opened.** A poem in fragments is nothing, so poems go
+in complete. Short stories and essays get their opening two or three paragraphs —
+enough to establish a voice and pull you in — then a pointer to where the rest
+lives. That is a deliberate trade: full texts every night cost about a dollar a
+run, roughly a thousand dollars across the program.
+
+**Public domain by preference.** Work published before 1931 in the US, or
+otherwise free, so excerpts are safe and the links go somewhere public. Work still
+in copyright gets a few lines at most and a pointer.
 
 **A note, not a lecture.** Each piece carries two or three sentences on why it is
 worth the ten minutes — what to watch for, what it is doing. Enough to open the
@@ -49,8 +59,9 @@ door, not enough to substitute for walking through it.
 - Schedule: `30 3 * * *` (UTC), which is 11:30 PM Eastern during daylight saving
   time. Because 11:30 PM Eastern falls after midnight UTC, each run is stamped with
   the following day's UTC date.
-- Delivery: email.
-- Log: `READING_LOG.md`, appended by each run, committed to this branch.
+- Delivery: the reading page above, republished in place each night.
+- Log: the page's own log table. `READING_LOG.md` in this directory records why
+  the log lives there rather than here.
 
 ### Daylight saving
 
