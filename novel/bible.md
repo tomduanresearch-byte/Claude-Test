@@ -1,96 +1,152 @@
-# Series Bible: The Pill Taster
+# Series Bible: Heaven's Debtor
 
 This is the working reference. If something here contradicts a chapter, this file wins until the chapter is revised.
 
 ## World
 
-- **Qingzhou**, a mountainous frontier province of the mortal **Great Liang** dynasty. Mortal courts defer to the sects and pay tribute in herbs and ore.
-- **Mount Cangshan**, home of the Azure Furnace Sect. It has five peaks. **Pill Peak** holds the furnaces. Its runoff drains downhill to the **Tasting Hall** and, below that, to the **Dregs Pit**.
-- **Economy.** Spirit stones (low, mid and high grade) are the currency between cultivators. Inside the sect, disciples earn **contribution points** for duties and spend them on pills, techniques, and Clearing.
+### The shape of the world
+
+- **The Dust** is the mortal land below: vast, dry, ash-blown, thin in qi. Mortals, low cultivators, gangs, rogue cultivators, banned sects, and the tribulation grounds.
+- **The Nine Heavens** are floating continents stacked one above another in the sky, each higher Heaven smaller, brighter and denser in qi. From the Dust on a clear day you can see all of them. The First Heaven's shadow covers the western half of the southern Dust. The Ninth looks like a star.
+- **Heaven-pressure.** Each Heaven's qi is so dense that it crushes anyone below its matching realm. You can visit one Heaven above your realm with protection (sect jade, formations) and suffer for it. Two above will kill you. So each breakthrough is also a move upward: a bigger map, older sects, worse monsters. This is the main brake on power creep. Every Heaven is its own world with its own predators.
+- **Travel.** A few **Skygate Pillars**, mountain-sized stone columns, connect the Dust to the First Heaven. Above that, travel is by flying sword, cloud-barge and sect gate.
+
+### The Heavens (realm each one supports)
+
+| Heaven | Name | Realm needed to live there | Notes |
+|---|---|---|---|
+| (ground) | The Dust | none | Mortals and Qi Condensation. Most stall at QC layer 3. |
+| First | Verdant Heaven (Qingtian) | Foundation Establishment | Forests, rivers falling off its edges. Hundreds of small and mid sects. Arc One ends here. |
+| Second | Cloudsea Heaven (Yunhai) | Core Formation | Islands in a sea of cloud. Cloudsea Sword Sect. |
+| Third | Scarlet Heaven (Chitian) | Nascent Soul | Volcanic, red, glowing like a banked coal. |
+| Fourth | *(the Fallen Heaven)* | Soul Transformation | Fell about 3,000 years ago. Its wreck, **the Ruin**, lies in the Dust 300 li east of Thunderfall. With no Heaven of their own, Soul Transformation cultivators cling to the Third's peaks or the Fifth's underside: the notorious **Broken Rung** bottleneck. |
+| Fifth | Court Heaven | Void Refining | Seat of the Thunder Court. |
+| Sixth to Eighth | (named later) | Body Integration, Mahayana, Tribulation Transcendence | Only rumor in Book One. |
+| Ninth | Sovereign Heaven | beyond | **Lingxiao Hall**, where the Sovereign is said to sit. Nobody from below has been there in living memory. |
+
+### Economy
+
+- **Spirit stones** (low, mid, high grade) are the currency among cultivators. A low-grade stone is about a month's wages for a Dust laborer.
+- **Thunder-hearts**: crystallized lightning left where the final bolt of a tribulation grounds. Used in body-tempering and lightning artifacts. A walnut-sized one fetches about 300 low-grade stones in the Ghost Market. By custom they belong to the candidate's sect.
+- **Scorch-picking**: sifting tribulation ground for lightning-glass, fused ore and the remains of failed candidates. Pays better than farming and kills more people.
 
 ## Cultivation
 
 ### Realms (ladder)
 
-| # | Realm | Pinyin | Notes |
-|---|-------|--------|-------|
-| 1 | Qi Condensation | Ningqi | Nine layers. Qi is drawn into the meridians and gathered in the dantian. Outer disciples are almost all here. |
-| 2 | Foundation Establishment | Zhuji | Qi liquefies into a foundation. Bones and marrow are tempered. Lifespan about 200 years. Inner-disciple threshold. |
-| 3 | Core Formation | Jiedan | Foundation condenses into a golden core. The **first heavenly tribulation** comes here. Elders are at this level. Lifespan about 500 years. |
-| 4 | Nascent Soul | Yuanying | A soul-infant forms in the core and can survive the body's death. Grand elders and sect masters of mid-tier sects. |
-| 5 | Spirit Severing | Huashen | Mentioned only by rumor in Book One. |
+| # | Realm | Stages | Tribulation (normal) | Lifespan |
+|---|---|---|---|---|
+| 1 | Qi Condensation (Ningqi) | Layers 1–9 | none | mortal +20 |
+| 2 | Foundation Establishment (Zhuji) | Early, mid, late, peak | none | ~200 |
+| 3 | Core Formation (Jiedan) | Early, mid, late, peak | **9 bolts** | ~500 |
+| 4 | Nascent Soul (Yuanying) | Early, mid, late, peak | 18 bolts | ~1,000 |
+| 5 | Soul Transformation (Huashen) | | 27 bolts | |
+| 6 | Void Refining (Lianxu) | | 36 bolts | |
+| 7 | Body Integration (Heti) | | 45 bolts | |
+| 8 | Mahayana (Dacheng) | | 54 bolts | |
+| 9 | Tribulation Transcendence (Dujie) | | 81 bolts | ascension? |
 
-The first arc stays within Qi Condensation (Shen Mo) and Foundation Establishment (most antagonists). Core Formation and above act as distant powers. Keep it that way to avoid power creep.
+- **Stone-Breath Method**: the public mortal method carved on Thunderfall's west wall. In Dust-thin qi, 99 in 100 practitioners stop at QC layer 3.
+- **Layers vs realms.** Layer and stage breakthroughs are internal. *Realm* breakthroughs are the big walls, and from Core Formation on each one brings a heavenly tribulation.
 
-### Pills and dregs (the core rule)
+### Heavenly tribulations
 
-- Pills are how sects advance quickly. Pills are graded **Mortal, Earth, Heaven** (each low, mid, high). Foundation-level pills are Earth grade.
-- **Every pill leaves *dan zha* (dregs)**: the impurities of its herbs and the scars of its refining. Dregs settle in the meridians as grey sediment.
-- Too much sediment makes a person **silted**: qi flow slows, then stops. Advanced silting kills, usually quietly, in sleep.
-- **Clearing** is a Pill Hall service that flushes dregs with needles and cleansing baths. It costs 50 contribution points a session. The elite clear after every pill. Tasters earn 2 points a month and never clear.
-- **Tasters** (official title: *shiyao*, "pill-tester"; slur: *yao nu*, "pill slave") test new pills and batch samples. Protocol: hold the pill on the tongue for three breaths, name every ingredient you taste, swallow, then call out effects aloud while a jade **pulse-plate** under your palm records your qi. Most last about two years.
+- A tribulation is **Heaven's audit**: it weighs what a cultivator has taken from the world against what they can bear. Survive every bolt and the new realm forms flawless. Miss or fail bolts and it forms flawed (a Core Formation cultivator who takes only 8 of 9 has an **eight-bolt core**: weaker, and it will plateau).
+- Candidates register with the **Thunder Court** and take tribulation on designated grounds in the Dust (**Anvils**) so their home Heavens aren't damaged. Thunderfall's Anvil is the largest in the southern Dust. A Warden attends each one to count the bolts.
+- Bolts escalate in thickness and colour (white, blue, braided, violet...). The final bolt is preceded by a silence called **Heaven's breath**, and when it grounds it leaves a thunder-heart.
+- A bolt takes on the flavour of the candidate's Dao: a sword cultivator's bolts are cold and cutting, a blood cultivator's are hot and hungry.
+- **Interference.** Anyone who steps into another person's tribulation is struck. Normally they are annihilated, and the tribulation grows stronger. Allies cannot help.
+- A sword cultivator meets the final bolt blade-first, and it often forks off the steel toward the nearest metal. (Ling Xiao has seen this eleven times. This is his whole plan in Ch. 1.)
 
-### The Hundred Dregs (Shen Mo's path)
+### The Debt (Ling Xiao's path)
 
-- After the poisoning in Ch. 1, nine years of dregs collapse into a slowly turning grey **dregs seed** in Shen Mo's dantian. His meridians are clear for the first time since he was ten.
-- **Rule 1: name before you eat.** He can refine only dregs he has identified: ingredients, grade, effect. His ledger is his manual. Dregs he has not named are inert at best and rebel at worst (fever, meridian tearing).
-- **Rule 2: you relive the pill.** Refining a dreg makes his body go through that pill's effect again, including the pain, the nausea and the poison, at a fraction of the original strength. Dregs from lethal pills are dangerous to refine.
-- **Rule 3: supply is finite.** New dregs come only from pills he actually swallows or dregs he recovers (failed pills in the Dregs Pit, dregs-merchants). He cannot simply eat his way up the ladder.
-- **Payoff.** Dregs he has refined give him a deep physical memory of each pill. He can detect adulterants, resist poisons he has digested, and in time *direct* dregs into an opponent's silted meridians. That last ability is late Arc One and used sparingly.
-- **Origin (secret, revealed Ch. 12).** The Azure Furnace Sect was founded by tasters. The Hundred Dregs Sutra is carved inside the sealed Old Furnace beneath Pill Peak. Later leadership buried the history.
+Ling Xiao alone can take tribulation lightning **on credit**. He didn't learn it. It happened when he told Heaven, mid-strike, to "put it on my tab." Why it worked for him is a series mystery.
 
-## Sects and factions
+**Rule 1: Eat.** He can absorb a tribulation bolt that strikes his body, if he accepts it consciously. It must be *tribulation* lightning; natural storm lightning has no audit in it and simply burns him. The bolt pours into his cultivation at once, carrying him as far as his body can hold (one Core Formation bolt took him from QC 3 to QC 6 in three breaths).
 
-- **Azure Furnace Sect (Qinglu Zong).** A mid-tier alchemy sect that sells pills across Qingzhou. Rich, proud, and dependent on its reputation for safe pills, which is why a poisoning scandal is existential.
-  - **Pill Hall.** Alchemists. Elder Gu Hanshan presides. Controls the **sealed stores** of restricted ingredients.
-  - **Herb Hall.** Cultivation and purchase of herbs.
-  - **Law Hall.** Discipline, investigations, executions.
-  - **Outer Affairs.** Outer disciples, servants and tasters. Steward Kang runs the Tasting Hall.
-  - **Sword Pavilion.** Small; guards the sect. Pei Wenyuan trains here as well as in alchemy.
-- **Thousand Waves Sect.** Sword-and-water sect to the east. The Azure Furnace's biggest customer and quiet rival, and a red herring in the poisoning plot.
-- **Crimson Cauldron Valley.** An unorthodox alchemy sect that uses living tasters openly and is proud of it. It mirrors what the Azure Furnace hides. Arc Two.
+**Rule 2: Owe.** Every stolen bolt becomes a black stroke of ink on his left palm, the **Ledger mark**. The strokes add up across his hand and later up his arm. They look like parts of a character that hasn't been decided yet. The mark is cold to the touch and he can feel the debt waiting "the way a moneylender waits."
+
+**Rule 3: Pay.** At his next *realm* breakthrough, Heaven sends back every bolt he owes, each at its original strength and flavour, on top of whatever tribulation that realm would normally bring. This means he gets a tribulation even at Foundation Establishment, where no one else does. If he survives, the strokes vanish, his body is tempered by every bolt, and each bolt's flavour becomes a permanent **paid imprint** (a lasting understanding of that Dao's lightning). If he dies, the debt returns to Heaven.
+
+**Supporting rules.**
+
+- **Banked thunder.** Whatever the bolt gives beyond his body's limit coils in his dantian as banked thunder, keeping its flavour. He can spend it in a fight as **Borrowed Thunder**, a burst of power shaped by that flavour (Canglan's bolt lets him throw a cutting arc; the blood bolts make him faster and hungrier and harder to control). Spending banked thunder uses it up. **It does not reduce the debt.** Win now, pay later.
+- **No stalling forever.** He can suppress a realm breakthrough, but the longer he does, the colder the mark burns and the more his qi sours. There's no fixed timer; Heaven is patient, not infinitely.
+- **Reclaiming.** When a stolen bolt comes back down, the person it was originally meant for can stand in it *with* him. The bolt strikes them both: it completes their flawed realm and still counts as paid for him. (This is why Mei Canglan needs him alive and at Foundation within about ninety days. The payoff is the two of them standing in one bolt in Ch. 13.)
+- **Extraction.** Banked thunder and owed bolts can be drawn out of a *living* debtor with a refining formation and condensed into a pill. It kills the debtor slowly. (Elder Hu's plan.)
+- **Power-creep brake.** Every bolt he steals makes his next breakthrough more lethal. Greed is literally self-limiting.
+
+### Ling Xiao's progression (Arc One)
+
+| Chapter | Realm | Debt (strokes) | Banked thunder |
+|---|---|---|---|
+| Start of Ch. 1 | QC 3 (two years stuck) | 0 | none |
+| End of Ch. 1 | QC 6 | 1 (Canglan's ninth bolt, Core, sword) | sword-thunder |
+| Ch. 5 | QC 7 | 3 (+2 blood bolts, Scarlet Lamp, Core) | sword + blood |
+| Ch. 7 | QC 8 | 3 | sword-thunder mostly spent |
+| Ch. 10 | QC 9 | 3 | |
+| Ch. 13 | Foundation Establishment (early) | 0, paid | paid imprints: sword-thunder, blood-thunder |
+
+## Factions
+
+- **Thunder Court (Leiting Si).** Seated on the Fifth Heaven. Registers and oversees every tribulation, charges fees, and hunts **bolt-thieves**. It holds no territory below but every sect defers to it. Its doctrine: a stolen bolt is a crack in Heaven's accounts, and the Fourth Heaven fell because of one. Wardens wear plain white and carry a brush and scroll.
+- **Cloudsea Sword Sect (Yunhai Jianzong).** A major orthodox sword sect on the Second Heaven. Proud, precise, formal. Mei Canglan's sect.
+- **Skygate Pavilion (Tianmen Ge).** A mid-sized First Heaven sect that administers the Thunderfall Skygate Pillar, runs the twelve-yearly Climb, and taxes the southern Dust. Rich and entrenched. Elder Hu's seat.
+- **Stormwatch Sect (Wangbao Zong).** A small, poor First Heaven sect perched on the rim that overhangs the Anvil. It studies tribulations and is mocked as a sect of "cloud-gazers." Its master is Old Yan (eccentric, Core Formation, flawless nine-bolt core, three hundred years old). Ling Xiao chooses it in Ch. 15.
+- **Other First Heaven sects recruiting at the Climb:** Verdant Pine Sect (large, orthodox, sword and formation), Ironbark Monastery (body cultivators), Hundred Flavors Hall (spirit cuisine and alchemy; takes Dumpling).
+- **Blood Lamp Sect.** A banned demonic sect hiding in the Dust. Its cultivators take tribulations illegally in the Ruin to avoid the Court.
+- **Iron Crows.** Thunderfall's picker gang. Control the best rows of the Anvil. Secretly paid by Skygate Pavilion's steward.
 
 ## Main characters
 
-- **Shen Mo (沈墨)**, 17. Taster for nine years, sold to the sect at eight by a debt-ridden uncle. Qi Condensation layer 1 at the start; layer 2 after Ch. 1. Quiet, dry-humored, methodical, stubborn. Protects the younger tasters out of practicality ("a dead taster means more tests for the rest of us"), which he pretends is not affection. Keeps **the ledger**: 412 pages of stitched bamboo paper, 3,961 entries at the start of Ch. 1. Gift: an extraordinarily precise palate. Flaw: he trusts records more than people and waits too long to act.
-- **Lin Qiao (林巧)**, 19. Inner disciple, Foundation Establishment (early), Elder Gu's most gifted apprentice, and designer of the Nine-Turn Marrow Pill. Sharp, impatient, honest to the point of rudeness. Her family owes the sect a large debt and her talent is the repayment, so she is closer to Shen Mo's position than she admits. Ally and rival, not a prize. Any romance is slow and optional.
-- **Elder Gu Hanshan (顾寒山)**, about 300. Core Formation (late). Head of the Pill Hall. A brilliant alchemist and cold utilitarian who believes tasters are a regrettable necessity and treats them as instruments, not enemies. Not the poisoner. His arc across the series goes from specimen-collector to reluctant ally.
-- **Pei Wenyuan (裴文远)**, 18. The sect's golden disciple, Qi Condensation 9th layer, attempting Foundation Establishment in ten days with the Nine-Turn Marrow Pill. Courteous, generous, genuinely good, and completely unaware that thousands of his pills were tested on people like Shen Mo. The poison is aimed at him.
-- **Xu Ping (许平)**, 12. The newest taster, three months in, Qi Condensation layer 2, still believes he will be promoted. Talkative and brave in a way that frightens Shen Mo. Shen Mo's stake.
-- **Steward Kang Lu (康禄)**, 40s. Outer Affairs steward over the tasters, Foundation Establishment (early). Petty, cruel and corrupt: he sells tester rosters and falsifies death counts. He was a taster himself thirty years ago and survived by becoming what he hated. A red herring for the poisoning, but guilty of plenty.
-- **Granny Fu (傅婆婆)**, about 80, blind. Lives in a hut of broken furnace bricks at the edge of the Dregs Pit and sifts it for scraps to sell. Everyone thinks she is mad. She was a Core Formation cultivator whose core was "harvested" by the sect generations ago. She knows about the Hundred Dregs and refuses to explain more than she must ("Knowing things in this sect gets you thrown down here").
-- **Zhou Heng (周衡)**, 30s. Elder Gu's senior disciple, Foundation Establishment (late), passed over for the Nine-Turn project in favor of Lin Qiao. The hand behind the adulteration, working for someone higher (Arc One climax).
+- **Ling Xiao (凌霄)**, 16. Scorch-picker, Thunderfall. Named after Lingxiao Hall on the Ninth Heaven. Cocky, funny, generous, fast-talking and fast-thinking. Reads terrain and people, and has watched 41 tribulations from the red stakes and remembers every one. Never picks on anyone smaller. Stuck at QC 3 for two years (once tried eating powdered lightning-glass; does not recommend it). **Wants:** near term, a First Heaven sect place so his mother gets residency and clean air; long term, the top of the sky ("I'll pay you at the top"). **Flaw:** he gambles. Every problem looks to him like a bet worth making, and the Debt makes that literal. **Signature move:** the smile that gets him out of trouble as often as into it. Treasure (used up in Ch. 1): a heaven-iron spike he dug out of a crater three years ago.
+- **Ma Tang (唐玉兰, Tang Yulan)**, 41. His mother. Runs a tea stall on Kiln Street. Has ash-lung and hides the blood on her sleeves; he sees it anyway. Sharp-tongued, funny, proud, and refuses to be a sad reason for anything ("Don't you dare climb a mountain on my account. Climb it on yours."). His father is never discussed. She says only that he "owed everybody money and paid nobody," and that line should land differently later in the series.
+- **Guo Bao (郭宝), "Dumpling"**, 15. Best friend. Built like a rice barrel, QC 2, far stronger than he looks and gentler than anyone expects. Loyal and a worrier. Wants to cook for immortals. He climbs the Skygate too and is picked by the Hundred Flavors Hall.
+- **Mei Canglan (梅苍澜)**, 24. Cloudsea Sword Sect prodigy, now Core Formation (early), with an **eight-bolt core** because Ling Xiao took her ninth bolt. Cold, exact, proud, honest, with a dry humour that shows up slowly. Her flaw will set permanently in about ninety days unless she takes the bolt back, and that can only happen when Ling Xiao reaches Foundation Establishment. So she has to keep him alive, train him and get him to Foundation fast, while furious with him. Ally and rival, not a prize. Her flying sword is named **Frost Reed**; it was cracked by the eighth bolt.
+- **Warden Bai Qiong (白穹)**, appears in her 30s. Thunder Court Warden, Nascent Soul (early). Keeps count. Stern, fair, with a bookkeeper's mind and a very dry wit. Believes bolt-thieves endanger every Heaven. Hunts Ling Xiao through Arc One, witnesses him pay in full at the climax, and rules that "a debtor who pays is not a thief." She registers him instead of sealing him and keeps watching.
+- **Elder Hu Zhenyang (胡振阳)**, 183. Skygate Pavilion elder who governs the Thunderfall Skygate. Foundation Establishment (peak), stuck there for eighty years because he is afraid of his Core tribulation. His lifespan is running out. Dignified, patient and very frightened. He realises a debtor's banked thunder, refined into a **Thunder-Debt Pill**, would carry him through Core Formation. The main antagonist of Arc One. He is struck down by Heaven when he tries to steal from Ling Xiao's tribulation.
+- **Hu Qingshan (胡青山)**, 17. Elder Hu's great-grandson, born in the Dust to a branch family, QC 9 at the start. Spear fighter. Disciplined, cold, hard-working, and furious that everyone assumes his place was bought. Beats Ling Xiao cleanly on the Skygate (Ch. 10). When he learns what his great-grandfather is doing, he chooses the right side, at a price. A rival who ends Arc One with mutual respect.
+- **Big Tan (谭大)**, 20s. Iron Crow enforcer, QC 5. Humiliated in Ch. 1, holds a grudge.
+- **Crow-Father Gou Wu (苟五)**, 50s. Head of the Iron Crows, QC 9, uses iron claw gauntlets. In Skygate Pavilion's pay.
+- **Steward Liang Fu (梁福)**, 60s. Elder Hu's steward, Foundation (early). Smooth and observant. Recognizes fresh tribulation qi in the thunder-heart Ling Xiao sells.
+- **Daoist Scarlet Lamp (赤灯道人)**. Blood Lamp Sect, Foundation peak going Core, takes an illegal tribulation in the Ruin (Ch. 5). Ling Xiao steals two of his bolts. He survives with a flawed core and a grudge. Recurring threat in later arcs.
+- **Old Yan (燕老)**, about 300. Master of Stormwatch Sect. Appears in Ch. 14–15.
 
-## Recurring items and places
+## Places
 
-- **The ledger.** Shen Mo's record book: numbered entries giving pill, source, grade, taste, effect, dregs and a personal note.
-- **Nine-Turn Marrow Pill.** Earth grade, low. Lin Qiao's Foundation Establishment pill. Nine concentric rings, each a "turn" that dissolves in sequence to wash the marrow. Base formula: blood-marrow ginseng (40-year), tiger-bone vine, white jade lotus seed, north-well cold-spring water, nine-leaf dragon's-tongue grass. The trial batch was adulterated with Grave-Lotus ash.
-- **Grave-Lotus ash.** A restricted ingredient kept only in the Pill Hall's sealed stores. Bitter like a snuffed candle wick. Attacks the heart meridian when the marrow is opened. It killed three tasters eight years ago; a furnace boy was executed for it.
-- **Tasting Hall.** A low stone hall at the foot of Pill Peak, with twelve benches, basins and a brass bell. "Poison runs downhill, and so does everything else."
-- **Dregs Pit.** Refuse pit behind Pill Peak, fed by a chute: furnace slag, spoiled herbs, failed pills, dead tasters. Slag walls about sixty feet high.
-- **The Old Furnace.** A sealed ancient furnace beneath Pill Peak, used as the outer-disciple trial ground (secret realm) in Ch. 11–12.
+- **Thunderfall (Leiluo Cheng).** Mortal city on the edge of the Anvil. Ash, kilns, tea stalls, picker gangs. The Stone-Breath Method is carved on its west wall. Kiln Street is where Ma Tang's stall is.
+- **The Anvil.** Black glass plain, forty li across, fused by millennia of tribulations. Ringed by **four hundred red stakes** (the safe line). **Hollow glass**: bubbles under the crust left by old bolts; it rings half a tone flat when stepped on.
+- **The Ghost Market.** An underground night market in old lava tubes beneath the Anvil's northern edge.
+- **The Ruin.** Wreck of the Fourth Heaven, a broken range of upturned continent 300 li east. Qi-warped beasts, collapsed palaces, and carvings that show a man with the **same Ledger mark** holding lightning, labelled **Debtor** (Ch. 5–6).
+- **The Skygate Pillar.** A mountain-sized column from Thunderfall's outskirts to the underside of the First Heaven. **9,999 steps** that grow heavier with Heaven-pressure. A **Challenge Ledge** every thousand steps, where climbers may challenge someone ahead of them for their place. Sect scouts watch from the ledges. The top 999 steps (the **Foundation Stair**) demand a Foundation body; historically no Qi Condensation climber has passed step 8,000.
+- **The Climb.** Held every twelve years. Open to anyone under twenty with a **Skygate token** (100 low-grade spirit stones, or a sponsor). The highest climber chooses their sect first.
 
 ## Glossary
 
-- **qi**: vital energy cultivated by practitioners.
-- **dantian**: the energy center below the navel where qi gathers.
-- **meridians**: channels through which qi flows.
-- **dan zha / dregs**: pill residue left in the meridians.
-- **silted**: condition of meridians clogged by dregs.
-- **Clearing**: paid treatment to flush dregs.
-- **taster / shiyao**: official pill-tester. **yao nu**: slur, "pill slave".
-- **pulse-plate**: jade plate that glows with the qi of whoever touches it. Green is healthy flow, grey is failing, black is stopped.
-- **turn**: one dissolving stage of a multi-stage pill.
-- **spirit stones**: cultivator currency.
-- **contribution points**: sect-internal currency.
-- **shixiong / shijie**: senior brother / senior sister (fellow disciple of higher seniority). **shidi / shimei**: junior brother / junior sister.
-- **zhanglao**: Elder (title). **daozhang**: respectful address for a Daoist cultivator.
-- **face**: reputation and standing; losing it is serious.
-- **heavenly tribulation**: lightning trial from Heaven at major breakthroughs, starting at Core Formation.
-- **Dao heart**: a cultivator's inner resolve; a cracked Dao heart stalls cultivation.
+- **qi**: vital energy. **dantian**: energy centre below the navel. **meridians**: qi channels.
+- **the Dust**: the mortal lands. **Heaven-pressure**: the crushing density of a higher Heaven's qi.
+- **tribulation / bolt**: Heaven's lightning audit at realm breakthroughs. **Heaven's breath**: the pause before the final bolt. **thunder-heart**: crystal left by a final bolt.
+- **eight-bolt core** (etc.): a flawed realm formed from an incomplete tribulation.
+- **the Ledger / Ledger mark / strokes**: Ling Xiao's debt marks. **banked thunder**: stored stolen lightning. **Borrowed Thunder**: spending it in combat. **paid imprint**: permanent Dao insight from a repaid bolt.
+- **scorch-picker**: someone who sifts tribulation ground. **hollow glass**: see the Anvil.
+- **Warden**: Thunder Court officer. **bolt-thief**: the Court's word for what Ling Xiao is.
+- **spirit stones**: currency. **Skygate token**: entry to the Climb.
+- **shixiong / shijie**: senior brother / senior sister. **shidi / shimei**: junior brother / junior sister.
+- **zhanglao**: Elder. **daozhang**: address for a Daoist cultivator. **Immortal**: what mortals call any cultivator from the Heavens.
+- **face**: reputation and standing.
+- **Dao heart**: a cultivator's inner resolve.
+
+## Series mysteries (author only; reveal slowly)
+
+- **Why Ling Xiao?** The Debt answered him and no one else in three thousand years. Seeds: his father ("owed everybody money"), and the Ruin carvings of the Debtor.
+- **Why did the Fourth Heaven fall?** The Court says a bolt-thief's unpaid debt cracked it. The truth is more complicated.
+- **Who keeps Heaven's Ledger?** Something above the Ninth Heaven writes the debts down.
+- *Tentative, to be pitched to the publisher before committing:* the last Debtor did not die when the Fourth Heaven fell. Whoever sits in Lingxiao Hall may be him.
 
 ## Style notes (for me)
 
-- Use English titles in narration ("Senior Brother Pei", "Elder Gu") and keep pinyin for flavor terms (qi, dantian, dan zha). *Pending the publisher's preference.*
-- **Do not over-explain the system.** Show one rule per scene, in action, and let the bible hold the rest.
-- Ledger entries appear in italics, in the fixed format: *Entry N. Pill, source, grade. Taste. Effect. Dregs. Note.*
+- Third person, close on Ling Xiao. His voice carries the narration: quick, wry, confident, with real fear underneath.
+- **Don't over-explain the system.** Show one rule per scene, in action. The three rules (Eat, Owe, Pay) should each be *felt* before they're ever stated.
+- Every chapter needs one of: a fight, a breakthrough, or a heist or set piece. No chapter is only talk.
+- Use English titles in narration ("Elder Hu", "Warden Bai"). Keep pinyin for flavour terms (qi, dantian, li, jin).
+- Keep the vertical world visible: in almost every outdoor scene, the characters can see the Heavens above them.

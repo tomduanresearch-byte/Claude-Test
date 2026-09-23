@@ -1,33 +1,44 @@
-# The Pill Taster
+# Heaven's Debtor
 
-*Book One: The Dregs Pit*
+*Book One: Dust and Thunder*
 
 **Author:** Chen Wei
-**Genre:** Xianxia (Chinese cultivation fantasy)
-**Status:** First arc outlined (15 chapters), Chapter 1 drafted as sample
-**Planned length:** Book One about 45,000 words (arc one), series of 4–5 arcs
+**Genre:** Xianxia (Chinese cultivation fantasy), progression, action
+**Status:** Arc One outlined (15 chapters), Chapter 1 drafted as sample
+**Planned length:** Arc One about 45,000 words; open-ended serial of many arcs, one arc per Heaven
 
 ## Hook
 
-Every pill in the Azure Furnace Sect is tasted before it is sold. For nine years, the tongue that tasted them has belonged to Shen Mo.
+Heaven's lightning is a bill. Everyone else pays it. Ling Xiao put it on his tab.
 
 ## Logline
 
-A disposable pill-taster, whose meridians are clogged with the residue of four thousand pills other people grew strong on, is poisoned during a trial and thrown into the sect's refuse pit. He wakes up able to cultivate that residue. Now he has to find out who poisoned the pill before it kills the sect's golden disciple and the twelve-year-old taster scheduled to test it at dawn.
+A sixteen-year-old scorch-picker from the mortal Dust steps into a stranger's Core Formation tribulation to steal the leftovers and gets hit by the final bolt. He survives by telling Heaven to put it on his tab. Now he can eat tribulation lightning and turn it into raw power, and every bolt he steals will come back down on him when he breaks through, all at once. Nine Heavens hang in the sky above him. He means to climb all of them, and at the top he will pay Heaven what he owes.
 
 ## The pitch
 
-**Protagonist.** Shen Mo, seventeen, the longest-serving taster in the Azure Furnace Sect. He is patient, dry, observant, and stuck at the first layer of Qi Condensation since he was ten, because every pill he tests leaves *dan zha* (pill dregs) silting up his meridians. His one real asset is a hand-stitched ledger recording all 3,961 pills he has swallowed: what each tasted like, what it did, and where its dregs settled.
+**The world is vertical, and you can see how far there is to climb.** Nine Heavens float one above another over the mortal lands: continents in the sky, each denser with qi and more dangerous than the one below. The First Heaven's shadow darkens half a province. The Ninth is a star. You can't live on a Heaven until your realm can bear its pressure, so every breakthrough is also a move upward to a bigger map, stronger sects, older monsters. One Heaven, the Fourth, is missing: it fell three thousand years ago and its wreck lies in the Dust. Nobody will say why.
 
-**Cultivation system.** Cultivators climb the usual ladder (Qi Condensation, Foundation Establishment, Core Formation, Nascent Soul and above), and they climb it on pills. Every pill leaves dregs behind, and the sect's elite pay to have theirs cleared while tasters absorb everyone else's. Shen Mo's *Hundred Dregs* method lets him refine those dregs into cultivation, but only dregs he has already identified and understood. Refining a dreg means living through that pill's effect again, so his power is limited by what he knows and what he can survive, not by luck.
+**The protagonist wants everything.** Ling Xiao is named after Lingxiao Hall, the palace at the top of the Ninth Heaven. His mother did it as a joke ("If you're going to be born in the Dust, have a good address"), and he took it as a plan. He is cocky, funny, generous and quick, a street hustler who reads fights the way other people read books, and he never picks a fight with anyone smaller than him. Near term, he needs a place in a First Heaven sect so his mother can breathe air that will cure her ash-lung. Long term, he is going to the top of the sky, and he says so to anyone who will listen, including Heaven.
 
-**What sets it apart.**
+**The cultivation system (the Debt).** The ladder is familiar: Qi Condensation, Foundation Establishment, Core Formation, Nascent Soul and on up. Heavenly tribulations normally begin at Core Formation, and they are Heaven's audit of what a cultivator has taken from the world. Ling Xiao alone can take tribulation lightning *on credit*:
 
-- **The power comes from the bottom of the sect.** Most xianxia heroes find a treasure. Shen Mo's power is literally the waste left behind by other people's breakthroughs. The book is about the people a cultivation sect uses up to make its geniuses, and it still delivers the genre's pleasures: breakthroughs, tournaments, secret realms, and satisfying face-slaps.
-- **He wins by knowledge.** The ledger *is* his cultivation manual. He beats stronger people by knowing what is in their pills, their bodies and their lies. This keeps power creep in check, because every advance costs him study and pain.
-- **A mystery drives the first arc.** Somebody inside the Pill Hall is adulterating pills, and the first arc is a whodunit told as a cultivation story.
-- **No cardboard villains.** The golden disciple is decent and has no idea what his pills cost. The elder is brilliant and coldly pragmatic, not cackling. The female lead is a genius alchemist with her own debts and agenda, not a prize.
+1. **Eat.** He can absorb a bolt that strikes him, from anyone's tribulation, and turn it into cultivation on the spot. One stolen Core Formation bolt takes him from the third layer of Qi Condensation to the sixth in three breaths.
+2. **Owe.** Every stolen bolt is written on his palm as a stroke of ink. At his next realm breakthrough, Heaven sends back every bolt he owes, at full strength, on top of his own tribulation.
+3. **Pay.** If he survives, the debt is cleared and his body is tempered by all of it. The bigger the debt, the stronger he comes out, if he lives.
 
-**Comparable titles.** The ground-level grit and hard costs of *Reverend Insanity*, with a warmer protagonist; the craft focus of alchemy-centered serials; the "system as antagonist" angle of *Cradle*'s early books.
+Stolen bolts also carry the flavor of the Dao they were meant for. A swordswoman's bolt cuts. A blood cultivator's bolt burns him from inside. He can spend that lightning in a fight as a burst of borrowed power, but spending it doesn't clear the debt. So every fight is a choice between winning now and paying later, and every breakthrough is a set piece: a Qi Condensation boy whose Foundation tribulation lights up the sky like an elder's.
 
-**Audience.** Adult and older-teen English-language readers of translated and original web xianxia and progression fantasy. It works as a web serial (2,500–3,000-word chapters, each ending on a hook) and also collects cleanly into volumes of one arc each.
+**How progression feels.** Fast and physical, and always with a cost. Arc One takes him from the 3rd layer of Qi Condensation to Foundation Establishment, and each step is felt in his body, in the fights he can now win, and in the literal altitude he can reach. At the end of the arc he stands on the First Heaven for the first time, looks up, and there are eight more.
+
+**Why it's exciting.**
+
+- **A built-in engine for big scenes.** Tribulations are the most spectacular moments in xianxia. This book is built so that other people's tribulations become heists and battlefields, and Ling Xiao's own are the climaxes of each arc.
+- **Enemies with reasons.** Mei Canglan, the swordswoman whose ninth bolt he stole, has a flawed core because of him. She needs him alive until his Foundation tribulation brings her bolt back down so she can take it, which makes her the most dangerous bodyguard in the Dust. Warden Bai Qiong of the Thunder Court hunts bolt-thieves because the last one is rumored to have brought down the Fourth Heaven. And an old Skygate elder who has been afraid of his own tribulation for eighty years realizes that a debtor's body, refined into a pill, would carry him through it.
+- **Fights won by nerve and reading, not only by power.** Ling Xiao is almost always the weaker party in raw realm. He wins on terrain, timing, borrowed lightning and knowing exactly what his enemy's Dao tastes like.
+- **Power creep has a brake.** The debt scales with his greed, and the higher Heavens crush anyone who climbs before they're ready. Earlier stakes stay real because every Heaven is its own world with its own predators.
+- **A mystery above the sky.** Who keeps Heaven's Ledger? Why did the Fourth Heaven fall? And why does the mark on Ling Xiao's palm match carvings in its wreck?
+
+**Comparable titles.** The open ambition and "heaven-defying" drive of *I Shall Seal the Heavens* and *Battle Through the Heavens*, with a public ticking clock like BTTH's three-year pact; the vertical, escalating world of *Cradle*; a hero whose charm and gall carry the page, like Meng Hao at his best.
+
+**Audience.** Adult and older-teen English-language readers of translated and original web xianxia and progression fantasy. Built for web serialization (2,500 to 3,000-word chapters, a fight or breakthrough in most, every chapter ending on a hook) and collects into one volume per arc.
