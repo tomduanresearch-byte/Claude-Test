@@ -75,3 +75,34 @@ A dated record of every exchange with the publisher: what they asked for, their 
 **Pending:**
 - Publisher's approval or changes to the reworked Debt. After that, revise pitch.md, bible.md and outline.md, then draft Chapter 2.
 - Series secret pitch still outstanding.
+
+**Publisher's reaction:** rejected the three costs (see the fourth meeting).
+
+---
+
+## 2026-09-23: Fourth meeting
+
+**Publisher's notes (verbatim):** "Think its a bit contrived your downsides.. lets maybe rethink his scaling / uniqueness. Also, my personal preference - either have his parents be some elusive figures in the ninth (or beyond heavens), or have them dead."
+
+**My reading:** The costs were penalties bolted on by Heaven, not part of how the power works. Start again from the ground: what the power is, what it feeds on, what it can't do, and what it makes him chase. The limits should come from that and should send him out after things and into fights. Keep the Nine Heavens as a vertical world, the missing Fourth Heaven, and Ling Xiao's charm and ambition. Ma Tang and her ash-lung are cut. The parents must be either elusive figures in the Ninth Heaven or beyond, or dead, and they must be a reason he climbs.
+
+**Proposal (pitched, not applied):**
+
+*Concept A: Thunder-Born (recommended).* Ling Xiao was born inside a bolt of lightning. The bolt that killed his parents struck while his mother was giving birth, and it made his body out of Heaven's lightning. Ordinary qi slides off him (that's why he was stuck at QC 3). Tribulation lightning is the only thing that feeds him.
+- *Unique:* he eats tribulation bolts. Each one gives him raw cultivation, plus the Dao it carries (sword-bolt cuts, blood-bolt hungers) as power in his body.
+- *Scaling:* fast, in jumps, one stolen bolt at a time.
+- *Natural limits:* (1) Appetite. He can only digest bolts up to about one realm above his own; anything bigger kills him. Bolts from his own level or below give almost nothing once he has passed them. So he has to keep hunting bigger tribulations, and bigger tribulations happen higher up and are better guarded. (2) Raw Dao, no technique. A stolen sword-bolt gives him sword power but no swordsmanship. He has to find teachers and fight masters of each Dao to learn to use what he has eaten. (3) Every bolt is theft. Each one leaves someone with a flawed realm, so enemies and the Thunder Court's hunt build up naturally. (4) He can give a bolt back into its owner, but then he loses what it gave him.
+- *Parents: dead.* An illegal Heaven-strike killed them on the Anvil sixteen years ago. It was sent down from the Ninth Heaven. He still carries that bolt's taste, and he tastes every new bolt looking for it. Whoever sent it is at the top, and so is the only bolt big enough to finish him.
+
+*Concept B: Pressure-Forged (alternative).* Heaven-pressure doesn't crush him; it feeds him. The higher above his realm he stands, the faster he grows.
+- *Scaling:* he climbs before he's ready, and each Heaven becomes his forge.
+- *Natural limits:* the gains fade once his realm matches the Heaven he's on, so he has to keep moving up into danger. Surviving the air doesn't mean surviving the people: he is always the weakest in the room. Skygates are controlled, so he has to smuggle himself upward, and two Heavens above his realm is as far as his body can go.
+- *Parents: elusive, in the Ninth Heaven.* They left him in the Dust with a token, and his body is Ninth Heaven-born, which is why the Dust starved him. Weaker on tribulation spectacle and on stolen-Dao combat.
+
+**Arc One under Concept A (sketch):** Ch. 1 is kept (Canglan's ninth bolt is the first meal of his life). Canglan wants her bolt back, and he can only channel a Core bolt out once he reaches Foundation, so she trains him until then. The Ruin blood-bolts are raw Dao he can't control. Elder Hu wants to refine a lightning-born body into a pill. The climax becomes Ling Xiao forcing Hu's own Core tribulation on the Pillar and eating it to reach Foundation, then choosing to give Canglan's bolt back. Ma Tang is cut; Dumpling's family raised him. The final hook is that the Ninth Heaven bolt's taste is identified.
+
+**Question put to the publisher:** Concept A with dead parents, or B, or A with the parents alive and elusive above the Ninth?
+
+**Pending:**
+- Publisher's choice. Then rewrite pitch.md, bible.md, outline.md and Chapter 1, and draft Chapter 2.
+- Series secret to be re-pitched to fit the chosen concept.
