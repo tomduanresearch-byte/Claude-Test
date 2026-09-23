@@ -1,44 +1,47 @@
-# Heaven's Debtor
+# Thunder-Born
 
 *Book One: Dust and Thunder*
 
 **Author:** Chen Wei
 **Genre:** Xianxia (Chinese cultivation fantasy), progression, action
 **Status:** Arc One outlined (15 chapters), Chapter 1 drafted as sample
-**Planned length:** Arc One about 45,000 words; open-ended serial of many arcs, one arc per Heaven
+**Planned length:** Arc One about 45,000 words; open-ended serial of many arcs, each one opening the sky a little wider
 
 ## Hook
 
-Heaven's lightning is a bill. Everyone else pays it. Ling Xiao put it on his tab.
+He was born inside a bolt of lightning that fell from a clear sky. Ordinary qi won't touch him. The only thing that feeds him is Heaven's own thunder.
 
 ## Logline
 
-A sixteen-year-old scorch-picker from the mortal Dust steps into a stranger's Core Formation tribulation to steal the leftovers and gets hit by the final bolt. He survives by telling Heaven to put it on his tab. Now he can eat tribulation lightning and turn it into raw power, and every bolt he steals will come back down on him when he breaks through, all at once. Nine Heavens hang in the sky above him. He means to climb all of them, and at the top he will pay Heaven what he owes.
+Sixteen years ago a bolt fell out of a cloudless sky onto the edge of the Anvil, killed two strangers, and left their newborn son alive and crying in the crater. Now Ling Xiao is a scorch-picker stuck at the bottom of Qi Condensation, because qi slides off him like rain off oilcloth. When he steps into a swordswoman's tribulation to steal the leftovers and the ninth bolt hits him, he finds out what he is: his body is made of Heaven's lightning, and tribulation bolts are the only food it has ever wanted. The sky above him goes higher than anyone in the Dust can imagine. He means to eat his way to the top of it and find out who threw the bolt that made him.
 
 ## The pitch
 
-**The world is vertical, and you can see how far there is to climb.** Nine Heavens float one above another over the mortal lands: continents in the sky, each denser with qi and more dangerous than the one below. The First Heaven's shadow darkens half a province. The Ninth is a star. You can't live on a Heaven until your realm can bear its pressure, so every breakthrough is also a move upward to a bigger map, stronger sects, older monsters. One Heaven, the Fourth, is missing: it fell three thousand years ago and its wreck lies in the Dust. Nobody will say why.
+**The sky has no agreed top.** From the mortal Dust you can see one thing above you: the edge of a green land hanging over the western horizon, trailing waterfalls that turn to mist before they reach the ground. The Dust calls it Heaven. The songs say there are nine heavens; the storytellers say thirty-three; the pickers say one, and that's plenty. All of them are wrong. The land above is a continent bigger than the whole Dust its shadow falls on, and its sects call *themselves* "the Heavens" while they look up at lights they can't reach. Above those lights are domains, sky-seas and heavens that no one below has names for, with no count and no map anyone agrees on. Every time Ling Xiao climbs, the world gets bigger and he gets smaller. The reader goes up with him and finds out, again and again, what a small fish he is.
 
-**The protagonist wants everything.** Ling Xiao is named after Lingxiao Hall, the palace at the top of the Ninth Heaven. His mother did it as a joke ("If you're going to be born in the Dust, have a good address"), and he took it as a plan. He is cocky, funny, generous and quick, a street hustler who reads fights the way other people read books, and he never picks a fight with anyone smaller than him. Near term, he needs a place in a First Heaven sect so his mother can breathe air that will cure her ash-lung. Long term, he is going to the top of the sky, and he says so to anyone who will listen, including Heaven.
+**A heaven that broke.** Somewhere far above, long ago, an entire heaven shattered. Its pieces fell on a thousand lands. One of them lies in the Dust, three hundred li east of Thunderfall, a province of upturned palaces and warped beasts that mortals call the Ruin and think is the bones of a dead god. Its relics (sky-iron that remembers flying, pill gardens gone wild, sealed halls) are the Dust's greatest secret and its most dangerous treasure.
 
-**The cultivation system (the Debt).** The ladder is familiar: Qi Condensation, Foundation Establishment, Core Formation, Nascent Soul and on up. Heavenly tribulations normally begin at Core Formation, and they are Heaven's audit of what a cultivator has taken from the world. Ling Xiao alone can take tribulation lightning *on credit*:
+**And above everything, the True Realms.** Everything the lower world calls Heaven, from the green land over Thunderfall to courts and sects Ling Xiao won't meet for a hundred chapters, lies under a ceiling. The greatest powers below only whisper about what is above it. Arc One gives the reader one glimpse, on its last page.
 
-1. **Eat.** He can absorb a bolt that strikes him, from anyone's tribulation, and turn it into cultivation on the spot. One stolen Core Formation bolt takes him from the third layer of Qi Condensation to the sixth in three breaths.
-2. **Owe.** Every stolen bolt is written on his palm as a stroke of ink. At his next realm breakthrough, Heaven sends back every bolt he owes, at full strength, on top of his own tribulation.
-3. **Pay.** If he survives, the debt is cleared and his body is tempered by all of it. The bigger the debt, the stronger he comes out, if he lives.
+**The protagonist wants the whole sky.** Ling Xiao is cocky, funny, generous and quick, a street hustler who reads fights the way other people read books and never picks a fight with anyone smaller than him. His parents were strangers nobody in Thunderfall knew. All that survived of them is a scorched swaddling cloth embroidered with his name, 凌霄, "above the clouds." He isn't hunting anyone. He's hungry: to climb as high as the sky goes, to find out what he is and why he was born in lightning, and to stand somewhere no one in the Dust can even picture.
 
-Stolen bolts also carry the flavor of the Dao they were meant for. A swordswoman's bolt cuts. A blood cultivator's bolt burns him from inside. He can spend that lightning in a fight as a burst of borrowed power, but spending it doesn't clear the debt. So every fight is a choice between winning now and paying later, and every breakthrough is a set piece: a Qi Condensation boy whose Foundation tribulation lights up the sky like an elder's.
+**The cultivation system.** The ladder is familiar: Qi Condensation, Foundation Establishment, Core Formation, Nascent Soul and on up past anything the Dust has names for. From Core Formation on, every realm breakthrough brings a heavenly tribulation. Ling Xiao is **thunder-born**:
 
-**How progression feels.** Fast and physical, and always with a cost. Arc One takes him from the 3rd layer of Qi Condensation to Foundation Establishment, and each step is felt in his body, in the fights he can now win, and in the literal altitude he can reach. At the end of the arc he stands on the First Heaven for the first time, looks up, and there are eight more.
+1. **He eats bolts.** Tribulation lightning that strikes him becomes cultivation on the spot. One fork of a Core Formation bolt takes him from the third layer of Qi Condensation to the sixth in three breaths.
+2. **He keeps their Dao.** A bolt carries the flavor of its owner's path. A swordswoman's bolt leaves a **sword-vein** in him that cuts; a blood cultivator's leaves a hungry one. It's raw power, not skill, so he has to find teachers and fight masters to learn to use what he's eaten.
+3. **His appetite has a ceiling.** He can digest a bolt up to about one realm above his own. Anything heavier kills him, or lodges in him undigested like a blade in the belly. Bolts at his own level or lower barely feed him. So he has to keep hunting bigger tribulations, and the bigger ones happen higher up and are better guarded.
+4. **Every meal is theft.** Every bolt he eats leaves someone with a flawed realm. Enemies and the Thunder Court's hunt build up by themselves. He can give a bolt back to its owner, but he loses the Dao it gave him.
+
+**How progression feels.** Fast, in jumps, one stolen bolt at a time. Arc One takes him from QC 3 to Foundation Establishment. Each step can be felt in his body, in the fights he can now win, and in the height he can reach. At the end of the arc he stands on the land the Dust calls Heaven, looks up, and sees how much more sky there is.
 
 **Why it's exciting.**
 
-- **A built-in engine for big scenes.** Tribulations are the most spectacular moments in xianxia. This book is built so that other people's tribulations become heists and battlefields, and Ling Xiao's own are the climaxes of each arc.
-- **Enemies with reasons.** Mei Canglan, the swordswoman whose ninth bolt he stole, has a flawed core because of him. She needs him alive until his Foundation tribulation brings her bolt back down so she can take it, which makes her the most dangerous bodyguard in the Dust. Warden Bai Qiong of the Thunder Court hunts bolt-thieves because the last one is rumored to have brought down the Fourth Heaven. And an old Skygate elder who has been afraid of his own tribulation for eighty years realizes that a debtor's body, refined into a pill, would carry him through it.
-- **Fights won by nerve and reading, not only by power.** Ling Xiao is almost always the weaker party in raw realm. He wins on terrain, timing, borrowed lightning and knowing exactly what his enemy's Dao tastes like.
-- **Power creep has a brake.** The debt scales with his greed, and the higher Heavens crush anyone who climbs before they're ready. Earlier stakes stay real because every Heaven is its own world with its own predators.
-- **A mystery above the sky.** Who keeps Heaven's Ledger? Why did the Fourth Heaven fall? And why does the mark on Ling Xiao's palm match carvings in its wreck?
+- **Tribulations are heists and feasts.** The genre's biggest set pieces are other people's tribulations, and here every one is a meal, a heist and a battlefield.
+- **A world that keeps opening.** No neat ladder of numbered heavens. Each arc climbs into a bigger world whose people have their own wrong ideas about what lies above.
+- **Enemies with reasons.** Mei Canglan, the swordswoman whose ninth bolt is lodged in his belly, needs him alive and at Foundation within ninety days to take it back. Warden Bai of the Thunder Court hunts bolt-eaters on the Court's doctrine that stolen lightning cracks heavens. An old Skygate elder who has been afraid of his own tribulation for eighty years realizes that a thunder-born body, refined into a pill, would carry him through it.
+- **Fights won by nerve and reading.** Ling Xiao is almost always the weaker party in raw realm. He wins on terrain, timing, eaten Dao and knowing exactly what his enemy's lightning tastes like.
+- **Power creep has a natural brake.** His appetite drags him upward into danger, bolts from below stop feeding him, and every new land is bigger than the last, with older predators.
 
-**Comparable titles.** The open ambition and "heaven-defying" drive of *I Shall Seal the Heavens* and *Battle Through the Heavens*, with a public ticking clock like BTTH's three-year pact; the vertical, escalating world of *Cradle*; a hero whose charm and gall carry the page, like Meng Hao at his best.
+**Comparable titles.** The open ambition of *I Shall Seal the Heavens* and *Battle Through the Heavens*; the "world is always bigger than you thought" reveals of *Coiling Dragon* and *A Will Eternal*; the escalating vertical world of *Cradle*; a hero whose charm and gall carry the page, like Meng Hao at his best.
 
-**Audience.** Adult and older-teen English-language readers of translated and original web xianxia and progression fantasy. Built for web serialization (2,500 to 3,000-word chapters, a fight or breakthrough in most, every chapter ending on a hook) and collects into one volume per arc.
+**Audience.** Adult and older-teen English-language readers of translated and original web xianxia and progression fantasy. Built for web serialization (2,500 to 3,500-word chapters, a fight or breakthrough in most, every chapter ending on a hook) and collects into one volume per arc.

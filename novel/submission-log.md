@@ -1,6 +1,6 @@
 # Submission Log
 
-*Project: The Pill Taster (first meeting, rejected), now Heaven's Debtor (from the second meeting).*
+*Project: The Pill Taster (first meeting, rejected), then Heaven's Debtor (second to fourth meetings), now Thunder-Born (from the fifth meeting).*
 
 A dated record of every exchange with the publisher: what they asked for, their notes, what I delivered, and what is still pending.
 
@@ -106,3 +106,29 @@ A dated record of every exchange with the publisher: what they asked for, their 
 **Pending:**
 - Publisher's choice. Then rewrite pitch.md, bible.md, outline.md and Chapter 1, and draft Chapter 2.
 - Series secret to be re-pitched to fit the chosen concept.
+
+**Publisher's reaction:** approved Concept A with dead parents, with changes to motive and cosmology (see the fifth meeting).
+
+---
+
+## 2026-09-23: Fifth meeting
+
+**Publisher's notes (verbatim):** "I really like concept a. I wouldnt go as far as him trying to get revenge so to speak, but yes a works. I also want this world to be larger and more obscure… doesnt really make sense if ure in the mortal realm u can clearly understand the ninth realm. Usually in these novels is u dont even know how small of a fish you are. I do like the ideal of the fourt realm "breaking" and leaving behind treasures etc. but i wish somehow it wasnt so clearly bounded as realm 1-9… want it to be more grandeur. Would also appreciate realms even beyond that - like the true realms."
+
+**My reading:** Concept A approved (thunder-born, parents dead). The motive is ambition and the pull of the unknown, not revenge: the bolt that made him is a question leading upward. The world has to be much bigger and much less legible. Mortals can't see or name the whole sky. Each climb reveals more sky and a smaller Ling Xiao. No tidy numbered stack. Keep a broken realm whose fragments and treasures fell below. Add the True Realms above everything called Heaven, glimpsed only at the end of Arc One. Ranks, fights and fast progression stay central.
+
+**Delivered (retitled *Thunder-Born*, Book One: *Dust and Thunder*):**
+- `novel/pitch.md`: rewritten. New hook and logline, a sky with no agreed top, the Sundered Heaven, the True Realms, the thunder-born system (eats bolts, keeps their Dao, appetite ceiling, every meal is theft), the non-revenge motive.
+- `novel/bible.md`: rewritten. "Rule zero": all cosmology in the story is belief. Tier-by-tier beliefs (Dust, Verdant Heaven, Cloudsea, Thunder Court). Author-only master map: the Boundless Sky with countless drifting lands, land *weight* replacing numbered Heaven-pressure, the Ceiling, the True Realms. The Sundered Heaven (Yaoxiao) replaces the Fourth Heaven; the Ruin is one shard. Thunder-born rules (including bolt escalation within a tribulation, lodged thunder and returning a bolt), Arc One progression table, the Court shrunk to a Southern Registry of a much larger body, Auntie Guo added, Ma Tang removed, series mysteries.
+- `novel/outline.md`: rewritten. Arc One in 15 chapters with a planned sequence of reveals (Ch. 1 Canglan falls from above Heaven; Ch. 5 the sky-map; Ch. 8 the Clear-Sky Bolt file; Ch. 15 the Star-Lens and the glimpse of the True Realms). Climax changed: Ling Xiao forces Elder Hu's tribulation on the Pillar, eats bolts 1–6 to reach Foundation, leaves Hu alive with a three-bolt core, and gives Canglan's bolt back. Later arcs sketched.
+- `novel/chapters/01-the-sky-has-no-top.md`: new Chapter 1 (about 3,500 words). It opens on the unknown height of the sky and his ambition. The street fight, tribulation, first bolt eaten and QC 3 to QC 6 breakthrough are kept. The Debt, palm-strokes, "put it on my tab" and his mother are removed. It adds the crater-baby backstory, Canglan falling from above Heaven, the lodged sword-thunder and the older taste of the Clear-Sky Bolt.
+- **Old file removed:** `novel/chapters/01-put-it-on-my-tab.md` is superseded and has been deleted (git history keeps it).
+
+**Questions put to the publisher:**
+1. Is the title change to *Thunder-Born* acceptable, given that the Debt is gone?
+2. The glimpse of the True Realms comes only on the last page of Arc One, with smaller "the world is bigger" reveals in Ch. 1, 5, 8 and 15. Is that the right dose, or do you want an earlier tease?
+
+**Pending:**
+- Publisher's reaction to the new pitch, bible, outline and Chapter 1.
+- Chapter 2 ("Eight Bolts and a Liar"), to be drafted after approval.
+- Tentative parents secret (fugitives from very high up, hiding their child from something above the Ceiling) to be pitched before committing.
