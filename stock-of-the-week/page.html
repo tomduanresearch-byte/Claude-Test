@@ -1,163 +1,222 @@
 <title>The Friday Pick</title>
-<meta name="description" content="One stock a week: an investment thesis, a linked three-statement model and a DCF valuation.">
+<meta name="description" content="Weekly equity research: one stock, a specific thesis, a three-scenario model and a DCF valuation.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;500;600;700&display=swap">
 <style>
 :root {
-  --ground: #f4f5f2;
+  --ground: #f7f8fa;
   --surface: #ffffff;
-  --ink: #17211c;
-  --muted: #5d6a63;
-  --rule: #dbe0da;
-  --accent: #1d5c4b;
-  --accent-soft: #e3eee9;
-  --est: #eef2ee;
-  --pos: #1e7a46;
-  --neg: #b0372b;
-  --heat-lo: #f6e3df;
-  --heat-hi: #dcefe3;
-  --serif: "Newsreader", "Iowan Old Style", Georgia, serif;
-  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --ink: #0f1b2d;
+  --ink-2: #33415a;
+  --muted: #667085;
+  --rule: #e3e7ee;
+  --rule-strong: #c9d0db;
+  --navy: #13294b;
+  --emph: #13294b;
+  --navy-ink: #f4f6fa;
+  --navy-muted: #a9b6cc;
+  --tint: #eef2f8;
+  --est: #f3f6fa;
+  --gold: #a88437;
+  --pos: #16704f;
+  --neg: #b4372f;
+  --bear: #b4372f;
+  --base: #13294b;
+  --bull: #16704f;
+  --heat-pos: #e4f1ea;
+  --heat-neg: #f7e6e3;
+  --serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --sans: "Source Sans 3", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --ground: #0f1411; --surface: #161d19; --ink: #e5ebe7; --muted: #98a69e; --rule: #29332e;
-    --accent: #72c2a8; --accent-soft: #1b2c25; --est: #1a221e; --pos: #5fc58a; --neg: #ec7f72;
-    --heat-lo: #3a2320; --heat-hi: #1d3527;
+    --ground: #0b111a; --surface: #111a27; --ink: #e8edf4; --ink-2: #c3ccd9; --muted: #8e9bb0;
+    --rule: #1f2b3d; --rule-strong: #2d3b51; --navy: #1b3560; --navy-ink: #eef2f8; --navy-muted: #a3b3cc;
+    --tint: #152238; --est: #131e2e; --emph: #b9cdf0; --gold: #d2b06a; --pos: #4fbf8f; --neg: #ef8579;
+    --bear: #ef8579; --base: #9db8e8; --bull: #4fbf8f; --heat-pos: #173427; --heat-neg: #3a211f;
   }
 }
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --ground: #0f1411; --surface: #161d19; --ink: #e5ebe7; --muted: #98a69e; --rule: #29332e;
-  --accent: #72c2a8; --accent-soft: #1b2c25; --est: #1a221e; --pos: #5fc58a; --neg: #ec7f72;
-  --heat-lo: #3a2320; --heat-hi: #1d3527;
+  --ground: #0b111a; --surface: #111a27; --ink: #e8edf4; --ink-2: #c3ccd9; --muted: #8e9bb0;
+  --rule: #1f2b3d; --rule-strong: #2d3b51; --navy: #1b3560; --navy-ink: #eef2f8; --navy-muted: #a3b3cc;
+  --tint: #152238; --est: #131e2e; --emph: #b9cdf0; --gold: #d2b06a; --pos: #4fbf8f; --neg: #ef8579;
+  --bear: #ef8579; --base: #9db8e8; --bull: #4fbf8f; --heat-pos: #173427; --heat-neg: #3a211f;
 }
 * { box-sizing: border-box; }
-body { background: var(--ground); color: var(--ink); font: 15px/1.6 var(--sans); padding-inline: 16px; padding-block: 0 64px; }
-.wrap { max-width: 1040px; margin: 0 auto; }
-a { color: var(--accent); }
-.num, td, .mono { font-variant-numeric: tabular-nums; }
-.mono { font-family: var(--mono); }
+body { background: var(--ground); color: var(--ink); font: 16px/1.6 var(--sans); padding-inline: 16px; padding-block: 0 72px;
+  -webkit-font-smoothing: antialiased; font-variant-numeric: lining-nums tabular-nums; }
+.wrap { max-width: 1120px; margin: 0 auto; }
+a { color: var(--emph); text-underline-offset: 2px; }
+.label { font: 600 11px/1.3 var(--sans); letter-spacing: 0.11em; text-transform: uppercase; color: var(--muted); }
 
-.mast { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 24px;
-  padding-block: 28px 14px; border-bottom: 2px solid var(--ink); }
-.mast h1 { font: 600 30px/1.1 var(--serif); margin: 0; letter-spacing: -0.01em; }
-.mast .meta { font: 500 12px/1.4 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+/* Masthead */
+.mast { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px;
+  padding-block: 30px 14px; border-bottom: 1px solid var(--ink); }
+.brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.brand h1 { font: 500 26px/1 var(--serif); margin: 0; letter-spacing: -0.01em; }
+.brand .label { color: var(--muted); }
+.mast-meta { display: flex; gap: 18px; flex-wrap: wrap; }
+.mast-meta span { font: 500 13px var(--sans); color: var(--ink-2); }
+.testbar { margin-top: 14px; padding: 10px 14px; border: 1px solid var(--gold); color: var(--ink-2); font-size: 14px; border-radius: 4px; background: var(--surface); }
+.testbar b { color: var(--gold); letter-spacing: 0.06em; text-transform: uppercase; font-size: 12px; margin-right: 8px; }
 
-.hero { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; padding-block: 28px 8px; }
-.eyebrow { font: 500 11.5px/1.3 var(--sans); letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
-.ticker-line { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; }
-.ticker { font: 500 15px var(--mono); background: var(--ink); color: var(--ground); padding: 3px 9px; border-radius: 3px; }
-.stance { font: 600 12px var(--sans); letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; border-radius: 3px;
-  background: var(--accent-soft); color: var(--accent); }
-.stance.short { background: var(--heat-lo); color: var(--neg); }
-.company { font: 600 clamp(30px, 5vw, 44px)/1.08 var(--serif); margin: 12px 0 14px; text-wrap: balance; letter-spacing: -0.015em; }
-.headline { font: 500 20px/1.4 var(--serif); margin: 0 0 12px; text-wrap: balance; }
-.summary { margin: 0; max-width: 62ch; }
+/* Title block */
+.title { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 40px; padding-block: 34px 30px; border-bottom: 1px solid var(--rule); }
+.title .eyebrow { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; margin-bottom: 14px; }
+.tick { font: 700 13px var(--sans); letter-spacing: 0.06em; color: var(--navy-ink); background: var(--navy); padding: 3px 8px; border-radius: 2px; }
+.company { font: 500 clamp(34px, 5.2vw, 52px)/1.04 var(--serif); letter-spacing: -0.02em; margin: 0 0 18px; text-wrap: balance; }
+.headline { font: 400 italic clamp(19px, 2.2vw, 23px)/1.42 var(--serif); color: var(--ink-2); margin: 0 0 20px; max-width: 38em; text-wrap: pretty; }
+.summary { margin: 0; max-width: 66ch; color: var(--ink); }
 
-.valcard { background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; padding: 20px; align-self: start; }
-.kpis { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.kpi .l { font: 500 11px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
-.kpi .v { font: 500 22px/1.25 var(--mono); }
-.kpi .s { font-size: 12px; color: var(--muted); }
-.up { color: var(--pos); } .down { color: var(--neg); }
-.field { margin-top: 18px; }
-.field svg { display: block; width: 100%; height: auto; }
-.field text { font-family: var(--mono); font-size: 11px; fill: var(--muted); }
-.field .lbl { font-family: var(--sans); font-size: 11.5px; fill: var(--ink); }
-.btn { display: inline-flex; align-items: center; gap: 8px; margin-top: 16px; font: 500 14px var(--sans); color: var(--surface);
-  background: var(--accent); border: 0; border-radius: 4px; padding: 9px 14px; cursor: pointer; }
-.btn:hover { filter: brightness(1.08); }
-.btn:focus-visible, button:focus-visible, tr[tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-.btn[disabled] { opacity: 0.6; cursor: default; }
-.btn-note { font-size: 12px; color: var(--muted); margin-top: 6px; min-height: 1em; }
+.rating { background: var(--navy); color: var(--navy-ink); border-radius: 4px; padding: 22px 22px 18px; align-self: start; }
+.rating .label { color: var(--navy-muted); }
+.rating .stance { font: 600 30px/1.1 var(--serif); letter-spacing: 0.01em; margin: 4px 0 18px; }
+.rating dl { margin: 0; display: grid; grid-template-columns: 1fr auto; gap: 9px 12px; font-size: 14.5px; }
+.rating dt { color: var(--navy-muted); }
+.rating dd { margin: 0; text-align: right; font-weight: 600; }
+.rating .pt { font: 600 28px/1 var(--sans); color: var(--navy-ink); }
+.rating .pt-row { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,0.14); }
+.rating .up { font: 600 17px var(--sans); }
+.rating .note { font-size: 12px; color: var(--navy-muted); margin-top: 14px; line-height: 1.45; }
+.dl { width: 100%; margin-top: 16px; font: 600 14px var(--sans); color: var(--navy); background: var(--navy-ink); border: 0; border-radius: 3px; padding: 10px 12px; cursor: pointer; }
+.dl:hover { filter: brightness(0.96); }
+.dl[disabled] { opacity: 0.6; cursor: default; }
+.dl-note { font-size: 12px; color: var(--navy-muted); margin-top: 6px; min-height: 1em; }
+button:focus-visible, tr[tabindex]:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
 
-section { padding-block: 30px 6px; }
-h2 { font: 600 22px/1.25 var(--serif); margin: 0 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); }
-h3 { font: 600 15px/1.35 var(--sans); margin: 0 0 6px; }
+/* Key data */
+.keydata { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); border-bottom: 1px solid var(--rule); }
+.keydata > div { padding: 16px 16px 16px 0; }
+.keydata > div + div { padding-left: 16px; border-left: 1px solid var(--rule); }
+.keydata .v { font: 600 19px/1.3 var(--sans); margin-top: 3px; }
 
-.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 28px; }
-.pillar p { margin: 0; color: var(--ink); }
-.pillar .k { font: 500 12px var(--mono); color: var(--accent); display: block; margin-bottom: 4px; }
-.variant { margin-top: 22px; padding: 16px 18px; background: var(--accent-soft); border-radius: 6px; max-width: 78ch; }
-.variant h3 { color: var(--accent); }
-.variant p { margin: 0; }
+section { padding-block: 44px 0; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+h2 { font: 500 26px/1.2 var(--serif); letter-spacing: -0.01em; margin: 0; }
+.sec-head .label { text-align: right; }
+h3 { font: 600 16px/1.35 var(--sans); margin: 0 0 6px; }
 
-.tabs { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; }
-.tabs button { font: 500 13px var(--sans); color: var(--muted); background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 12px; cursor: pointer; }
-.tabs button[aria-selected="true"] { color: var(--surface); background: var(--ink); border-color: var(--ink); }
-.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 6px; }
-table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
-th, td { padding: 7px 10px; text-align: right; white-space: nowrap; }
-th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); }
-thead th { font: 500 12px var(--mono); color: var(--muted); border-bottom: 1px solid var(--rule); }
-td { font-family: var(--mono); font-size: 13px; }
-td:first-child { font-family: var(--sans); font-size: 13.5px; }
-tr.sub td { color: var(--muted); font-size: 12px; }
-tr.sub td:first-child { padding-left: 24px; }
+/* Thesis */
+.pillars { display: grid; gap: 0; }
+.pillar { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 28px; padding-block: 22px; border-bottom: 1px solid var(--rule); }
+.pillar:first-child { padding-top: 4px; }
+.proof { font: 500 25px/1.18 var(--serif); color: var(--emph); letter-spacing: -0.01em; }
+.pillar p { margin: 0; max-width: 68ch; color: var(--ink-2); }
+.pillar h3 { font-size: 17px; }
+.variant { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 28px; margin-top: 28px; padding: 24px 0 4px; border-top: 2px solid var(--gold); }
+.variant p { margin: 0; font: 400 20px/1.5 var(--serif); max-width: 40em; }
+
+/* Scenarios */
+.scen { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); background: var(--surface); border-radius: 4px; }
+.scen > div { padding: 20px 20px 18px; }
+.scen > div + div { border-left: 1px solid var(--rule); }
+.scen .top { display: flex; justify-content: space-between; align-items: baseline; }
+.scen .name { font: 600 13px var(--sans); letter-spacing: 0.1em; text-transform: uppercase; }
+.scen .prob { font: 600 13px var(--sans); color: var(--muted); }
+.scen .bar { height: 3px; background: var(--rule); margin: 10px 0 16px; }
+.scen .bar i { display: block; height: 100%; }
+.scen .val { font: 600 30px/1.1 var(--sans); }
+.scen .ups { font: 600 14px var(--sans); margin: 2px 0 14px; }
+.scen .why { font-size: 14.5px; color: var(--ink-2); margin: 0 0 14px; min-height: 4.4em; }
+.scen dl { display: grid; grid-template-columns: 1fr auto; gap: 5px 10px; margin: 0; padding-top: 12px; border-top: 1px solid var(--rule); font-size: 13.5px; }
+.scen dt { color: var(--muted); } .scen dd { margin: 0; text-align: right; font-weight: 600; }
+.range { margin-top: 22px; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 16px 18px 6px; }
+.range svg { display: block; width: 100%; height: auto; }
+.range text { font-family: var(--sans); font-size: 12px; fill: var(--muted); }
+.range .strong { fill: var(--ink); font-weight: 600; }
+
+/* Tables */
+.tabs { display: flex; flex-wrap: wrap; gap: 22px; margin-bottom: 14px; border-bottom: 1px solid var(--rule); }
+.tabs button { font: 600 14px var(--sans); color: var(--muted); background: none; border: 0; border-bottom: 2px solid transparent; padding: 6px 0 9px; margin-bottom: -1px; cursor: pointer; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.tbl { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { padding: 8px 12px; text-align: right; white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+thead th { font: 600 12px var(--sans); letter-spacing: 0.04em; color: var(--muted); border-bottom: 1px solid var(--rule-strong); padding-top: 11px; }
+thead th.split { border-left: 1px solid var(--rule-strong); }
+td.split { border-left: 1px solid var(--rule-strong); }
+tbody tr + tr td { border-top: 1px solid var(--rule); }
+tr.sub td { color: var(--muted); font-size: 13px; font-style: italic; }
+tr.sub td:first-child { padding-left: 26px; }
 tr.strong td { font-weight: 600; }
 .e { background: var(--est); }
 th:first-child.e, td:first-child.e { background: var(--surface); }
-.caption { font-size: 12.5px; color: var(--muted); margin: 10px 2px 0; max-width: 80ch; }
+.caption { font-size: 13px; color: var(--muted); margin: 10px 2px 0; max-width: 90ch; }
 
-.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
-.valgrid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); }
-@media (max-width: 860px) { .valgrid { grid-template-columns: 1fr; } }
-.assump { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; margin-bottom: 18px; }
-.assump div { background: var(--surface); padding: 12px 14px; }
-.assump .l { font: 500 11px var(--sans); letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted); }
-.assump .v { font: 500 18px var(--mono); }
-.sens td.c { font-weight: 600; outline: 2px solid var(--ink); outline-offset: -2px; }
-.sens thead th:first-child { font-family: var(--sans); }
+/* Valuation */
+.vgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.vtiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); margin-bottom: 26px; }
+.vtiles > div { padding: 14px 16px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin: 0 -1px -1px 0; }
+.vtiles .v { font: 600 20px/1.3 var(--sans); }
+.sens td.base { font-weight: 700; box-shadow: inset 0 0 0 2px var(--ink); }
+.vnote { margin: 22px 0 0; max-width: 78ch; color: var(--ink-2); }
 
-ul.plain { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-ul.plain li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; }
-ul.plain .when { font: 500 12px/1.6 var(--mono); color: var(--muted); }
-.risk b { display: block; font-weight: 600; }
-.risk span { color: var(--muted); }
-.kill { margin-top: 20px; }
-.kill ul { margin: 6px 0 0; padding-left: 18px; }
+/* Catalysts & risks */
+.cr { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; }
+.timeline { list-style: none; margin: 0; padding: 0; }
+.timeline li { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--rule); }
+.timeline .when { font: 600 13px/1.6 var(--sans); color: var(--emph); letter-spacing: 0.02em; }
+.risks { list-style: none; margin: 0; padding: 0; }
+.risks li { padding-block: 12px; border-bottom: 1px solid var(--rule); }
+.risks b { display: block; font-weight: 600; }
+.risks span { color: var(--ink-2); font-size: 15px; }
+.kill { margin-top: 26px; padding: 18px 20px; background: var(--surface); border: 1px solid var(--rule); border-left: 3px solid var(--neg); border-radius: 0 4px 4px 0; }
+.kill ul { margin: 8px 0 0; padding-left: 18px; }
+.kill li { margin-bottom: 4px; }
 
+.sources { font-size: 14px; columns: 2 320px; column-gap: 36px; padding-left: 20px; margin: 0; color: var(--ink-2); }
+.sources li { break-inside: avoid; margin-bottom: 6px; }
 .archive tbody tr { cursor: pointer; }
-.archive tbody tr:hover td, .archive tbody tr[aria-current="true"] td { background: var(--accent-soft); }
-.sources { font-size: 13px; columns: 2 280px; column-gap: 28px; padding-left: 18px; margin: 0; }
-.sources li { break-inside: avoid; margin-bottom: 4px; }
-.foot { margin-top: 36px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 12.5px; color: var(--muted); max-width: 90ch; }
-.empty { padding-block: 60px; max-width: 60ch; }
-.empty p { color: var(--muted); }
+.archive tbody tr:hover td, .archive tbody tr[aria-current="true"] td { background: var(--tint); }
+.pos { color: var(--pos); } .neg { color: var(--neg); }
+.disclose { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--rule); font-size: 13px; color: var(--muted); max-width: 96ch; }
+.empty { padding-block: 72px; max-width: 62ch; }
+.empty h2 { margin-bottom: 12px; }
+.empty p { color: var(--ink-2); }
 
-@media (max-width: 760px) {
-  .hero { grid-template-columns: 1fr; gap: 22px; }
-  .kpi .v { font-size: 19px; }
-  ul.plain li { grid-template-columns: 1fr; gap: 2px; }
+@media (max-width: 900px) {
+  .title { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+  .vgrid, .cr { grid-template-columns: minmax(0, 1fr); }
+  .scen { grid-template-columns: minmax(0, 1fr); }
+  .scen > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .scen .why { min-height: 0; }
+}
+@media (max-width: 640px) {
+  .pillar, .variant { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .keydata > div, .keydata > div + div { padding: 12px 12px 12px 0; border-left: 0; }
+  .timeline li { grid-template-columns: 1fr; gap: 2px; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  .btn, .tabs button { transition: background-color .15s, color .15s, filter .15s; }
+  .tabs button, .dl { transition: color .15s, border-color .15s, filter .15s; }
 }
 </style>
 
 <div class="wrap">
   <header class="mast">
-    <h1>The Friday Pick</h1>
-    <div class="meta" id="mast-meta">One stock a week · thesis, model, valuation</div>
+    <div class="brand"><h1>The Friday Pick</h1><span class="label">Equity research · weekly</span></div>
+    <div class="mast-meta" id="mast-meta"></div>
   </header>
+  <div id="testbar"></div>
   <main id="app"></main>
   <section id="archive-section" hidden>
-    <h2>Every pick so far</h2>
+    <div class="sec-head"><h2>Every pick</h2><span class="label">Select a row to open it</span></div>
     <div class="tbl"><table class="archive" id="archive"></table></div>
-    <p class="caption">Price, fair value and upside are as of each pick's publication. Select a row to open that week's report.</p>
+    <p class="caption">Price, fair value and upside are as of each pick's publication date.</p>
   </section>
-  <p class="foot">
-    Generated automatically every Friday after the US close. Financials come from each company's 10-K filings
-    (SEC XBRL); share prices come from web sources on the pick date. The model is a condensed three-statement
-    build with a five-year DCF. It is a research starting point, not investment advice. Check the filings before acting on anything here.
+  <p class="disclose">
+    Produced automatically every Friday after the US close. Historical financials come from company 10-K filings
+    (SEC XBRL); prices, rates and betas come from web sources on the pick date and are listed under Sources.
+    Fair value is the probability-weighted average of three scenario DCFs, each blending a perpetuity-growth
+    and an exit-multiple terminal value. This is research for discussion, not investment advice. Verify against
+    the filings before acting.
   </p>
 </div>
 
-<!-- PICKS-DATA: the weekly run appends one object to this array. Keep it valid JSON. -->
+<!-- PICKS-DATA: the weekly run inserts picks here with build_model.py page. Keep it valid JSON. -->
 <script type="application/json" id="picks">[]</script>
 
 <script>
@@ -166,157 +225,64 @@ ul.plain .when { font: 500 12px/1.6 var(--mono); color: var(--muted); }
   var picks = [];
   try { picks = JSON.parse(document.getElementById("picks").textContent) || []; } catch (e) { picks = []; }
   picks.sort(function (a, b) { return a.date < b.date ? 1 : -1; });
-
   var app = document.getElementById("app");
-  var el = function (tag, attrs, kids) {
+
+  function el(tag, attrs, kids) {
     var n = document.createElement(tag);
     if (attrs) for (var k in attrs) {
+      if (attrs[k] == null) continue;
       if (k === "text") n.textContent = attrs[k];
       else if (k === "class") n.className = attrs[k];
       else n.setAttribute(k, attrs[k]);
     }
     (kids || []).forEach(function (c) { if (c) n.appendChild(typeof c === "string" ? document.createTextNode(c) : c); });
     return n;
-  };
+  }
   var isNum = function (x) { return typeof x === "number" && isFinite(x); };
   var money = function (x) { return isNum(x) ? "$" + x.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "–"; };
   var pct = function (x, d) { return isNum(x) ? (x * 100).toFixed(d == null ? 1 : d) + "%" : "–"; };
   var signed = function (x) { return isNum(x) ? (x >= 0 ? "+" : "−") + Math.abs(x * 100).toFixed(1) + "%" : "–"; };
-  var mult = function (x) { return isNum(x) ? x.toFixed(1) + "x" : "–"; };
+  var mult = function (x) { return isNum(x) && x > 0 ? x.toFixed(1) + "x" : "n.m."; };
   var m = function (x) {
     if (!isNum(x)) return "–";
     var s = Math.abs(x).toLocaleString("en-US", { maximumFractionDigits: 0 });
     return x < 0 ? "(" + s + ")" : s;
   };
+  var m1 = function (x) { return isNum(x) ? x.toLocaleString("en-US", { minimumFractionDigits: 1, maximumFractionDigits: 1 }) : "–"; };
   var bigM = function (x) {
     if (!isNum(x)) return "–";
-    return x >= 1e6 ? "$" + (x / 1e6).toFixed(2) + "T" : x >= 1e3 ? "$" + (x / 1e3).toFixed(1) + "B" : "$" + x.toFixed(0) + "M";
+    var a = Math.abs(x), s = x < 0 ? "−" : "";
+    return s + (a >= 1e6 ? "$" + (a / 1e6).toFixed(2) + "T" : a >= 1e3 ? "$" + (a / 1e3).toFixed(1) + "B" : "$" + a.toFixed(0) + "M");
   };
   var longDate = function (d) {
     var t = new Date(d + "T12:00:00Z");
     return isNaN(t) ? d : t.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
   };
+  var cls = function (x) { return isNum(x) ? (x < 0 ? "neg" : "pos") : ""; };
 
   if (!picks.length) {
     app.appendChild(el("div", { class: "empty" }, [
-      el("p", { class: "eyebrow", text: "No picks yet" }),
-      el("h2", { text: "The first pick arrives this Friday" }),
-      el("p", { text: "Each Friday after the close, one US-listed company gets a thesis, a linked three-statement model built from its 10-K filings, and a DCF valuation. The Excel model downloads from this page." })
+      el("p", { class: "label", text: "No picks yet" }),
+      el("h2", { text: "The first report arrives Friday after the close" }),
+      el("p", { text: "Each week: one US-listed company, a thesis built on specific figures, a three-scenario model built from its 10-K filings, and a DCF valuation. The Excel model downloads from this page." })
     ]));
     return;
   }
 
-  function fieldChart(p) {
-    // Valuation range: sensitivity grid low–high, the two DCF methods, and the current price, on one scale.
-    var s = p.sensitivity && p.sensitivity.values ? [].concat.apply([], p.sensitivity.values).filter(isNum) : [];
-    var fv = p.fair_value || {};
-    var pts = s.concat([fv.perpetuity, fv.exit, fv.blended, p.price]).filter(isNum);
-    if (pts.length < 2) return null;
-    var lo = Math.min.apply(null, pts), hi = Math.max.apply(null, pts);
-    var pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad;
-    var W = 460, L = 118, R = 14, x = function (v) { return L + (v - lo) / (hi - lo) * (W - L - R); };
-    var rows = [];
-    if (s.length) rows.push({ label: "DCF sensitivity", a: Math.min.apply(null, s), b: Math.max.apply(null, s) });
-    if (isNum(fv.perpetuity)) rows.push({ label: "Perpetuity growth", a: fv.perpetuity, b: fv.perpetuity, dot: true });
-    if (isNum(fv.exit)) rows.push({ label: "Exit multiple", a: fv.exit, b: fv.exit, dot: true });
-    var H = 22 + rows.length * 28 + 24;
-    var NS = "http://www.w3.org/2000/svg";
-    var svg = document.createElementNS(NS, "svg");
-    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
-    svg.setAttribute("role", "img");
-    svg.setAttribute("aria-label", "Valuation range against the current share price");
-    var add = function (tag, a, text) {
-      var n = document.createElementNS(NS, tag);
-      for (var k in a) n.setAttribute(k, a[k]);
-      if (text != null) n.textContent = text;
-      svg.appendChild(n); return n;
-    };
-    rows.forEach(function (r, i) {
-      var y = 22 + i * 28;
-      add("text", { x: 0, y: y + 4, class: "lbl" }, r.label);
-      add("line", { x1: L, x2: W - R, y1: y, y2: y, stroke: "var(--rule)", "stroke-width": 1 });
-      if (r.dot) add("circle", { cx: x(r.a), cy: y, r: 5, fill: "var(--accent)" });
-      else add("rect", { x: x(r.a), y: y - 6, width: Math.max(2, x(r.b) - x(r.a)), height: 12, rx: 2, fill: "var(--accent)", "fill-opacity": 0.35 });
-      if (r.dot) add("text", { x: x(r.a), y: y - 9, "text-anchor": "middle" }, money(r.a));
-      else {
-        add("text", { x: x(r.a), y: y + 19, "text-anchor": "middle" }, money(r.a));
-        add("text", { x: x(r.b), y: y + 19, "text-anchor": "middle" }, money(r.b));
-      }
-    });
-    if (isNum(p.price)) {
-      var px = x(p.price), bottom = 22 + (rows.length - 1) * 28 + 12;
-      add("line", { x1: px, x2: px, y1: 8, y2: bottom, stroke: "var(--ink)", "stroke-width": 1.5, "stroke-dasharray": "3 3" });
-      var anchor = px > W - 70 ? "end" : px < L + 40 ? "start" : "middle";
-      add("text", { x: anchor === "end" ? W - 2 : px, y: H - 4, "text-anchor": anchor, class: "lbl" }, "Price " + money(p.price));
-    }
-    return el("div", { class: "field" }, [svg]);
-  }
-
-  function statementTable(p, which) {
-    var f = p.financials; if (!f) return el("p", { text: "No financials." });
-    var n = f.n_hist, years = f.years;
-    var defs = {
-      is: [
-        ["Revenue", "revenue", m, "strong"], ["Growth", "growth", function (x) { return pct(x); }, "sub"],
-        ["Gross profit", "gross_profit", m], ["Gross margin", "gm", function (x) { return pct(x); }, "sub"],
-        ["EBITDA", "ebitda", m], ["EBITDA margin", "ebitda_margin", function (x) { return pct(x); }, "sub"],
-        ["Operating income", "ebit", m], ["Operating margin", "ebit_margin", function (x) { return pct(x); }, "sub"],
-        ["Net income", "net_income", m, "strong"], ["Diluted EPS", "eps", money],
-        ["Diluted shares (m)", "shares", m]
-      ],
-      bs: [
-        ["Cash & equivalents", "bs_cash", m], ["Short-term investments", "bs_sti", m],
-        ["Total assets", "bs_ta", m, "strong"], ["Total debt", "bs_debt", m],
-        ["Net debt / (net cash)", "bs_netdebt", m], ["Total equity", "bs_eq", m, "strong"],
-        ["Balance check", "bs_check", m, "sub"]
-      ],
-      cf: [
-        ["Cash from operations", "cf_cfo", m, "strong"], ["Capital expenditures", "cf_capex", m],
-        ["Free cash flow", "cf_fcf", m, "strong"], ["Dividends", "cf_div", m], ["Share repurchases", "cf_bb", m]
-      ]
-    }[which];
-    var src = { is: f.income_statement, bs: f.balance_sheet, cf: f.cash_flow }[which] || {};
-    var thead = el("thead", null, [el("tr", null, [el("th", { text: "$ millions" })].concat(years.map(function (y, i) {
-      return el("th", { class: i >= n ? "e" : "", text: y });
-    })))]);
-    var tbody = el("tbody", null, defs.map(function (d) {
-      var vals = src[d[1]] || [];
-      return el("tr", { class: d[3] || "" }, [el("td", { text: d[0] })].concat(years.map(function (y, i) {
-        return el("td", { class: i >= n ? "e" : "", text: d[2](vals[i]) });
-      })));
-    }));
-    return el("div", { class: "tbl" }, [el("table", null, [thead, tbody])]);
-  }
-
-  function sensTable(p) {
-    var s = p.sensitivity; if (!s || !s.values) return null;
-    var all = [].concat.apply([], s.values).filter(isNum);
-    var lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
-    var price = p.price;
-    var thead = el("thead", null, [el("tr", null, [el("th", { text: "WACC ↓ / growth →" })].concat(s.growth.map(function (g) {
-      return el("th", { text: pct(g) });
-    })))]);
-    var tbody = el("tbody", null, s.wacc.map(function (w, i) {
-      return el("tr", null, [el("td", { class: "mono", text: pct(w) })].concat(s.values[i].map(function (v, j) {
-        var td = el("td", { text: money(v) });
-        if (isNum(v) && isNum(price)) td.style.background = v >= price ? "var(--heat-hi)" : "var(--heat-lo)";
-        if (i === 2 && j === 2) td.className = "c";
-        return td;
-      })));
-    }));
-    return el("div", { class: "tbl sens" }, [el("table", null, [thead, tbody])]);
+  function sectionHead(title, note) {
+    return el("div", { class: "sec-head" }, [el("h2", { text: title }), note ? el("span", { class: "label", text: note }) : null]);
   }
 
   async function download(p, btn, note) {
     note.textContent = "";
     try {
       var dl = window.claude && window.claude.use ? await window.claude.use("downloads") : null;
-      if (!dl) { note.textContent = "Downloads aren't available in this view. Open the page on claude.ai to save the model."; return; }
+      if (!dl) { note.textContent = "Downloads aren't available in this view. Open the page on claude.ai."; return; }
+      if (!p.model_b64) throw { message: "This pick has no model attached." };
       btn.disabled = true;
-      var res = await fetch(p.model_file);
-      if (!res.ok) throw { message: "The model file is missing from this page (HTTP " + res.status + ")." };
-      var blob = await res.blob();
-      await dl.save({ filename: p.model_file.split("/").pop(), data: blob });
+      var bin = atob(p.model_b64), bytes = new Uint8Array(bin.length);
+      for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      await dl.save({ filename: "Friday-Pick-" + (p.model_file || p.id + ".xlsx").split("/").pop(), data: bytes });
       note.textContent = "Saved.";
     } catch (e) {
       var code = e && e.code;
@@ -324,130 +290,229 @@ ul.plain .when { font: 500 12px/1.6 var(--mono); color: var(--muted); }
     } finally { btn.disabled = false; }
   }
 
+  function rangeChart(p) {
+    var S = p.scenarios || {}, names = ["bear", "base", "bull"];
+    var vals = names.map(function (k) { return S[k] && S[k].outputs ? S[k].outputs.v_blend : null; });
+    var pts = vals.concat([p.price, p.price_target]).filter(isNum);
+    if (pts.length < 3) return null;
+    var lo = Math.min.apply(null, pts), hi = Math.max.apply(null, pts), pad = (hi - lo) * 0.1 || 1;
+    lo -= pad; hi += pad;
+    var W = 1000, H = 92, L = 16, R = 16, y = 44;
+    var x = function (v) { return L + (v - lo) / (hi - lo) * (W - L - R); };
+    var NS = "http://www.w3.org/2000/svg", svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Scenario values per share against the current price");
+    function add(tag, a, text) { var n = document.createElementNS(NS, tag); for (var k in a) n.setAttribute(k, a[k]); if (text != null) n.textContent = text; svg.appendChild(n); return n; }
+    var bx = x(Math.min.apply(null, vals.filter(isNum))), ex = x(Math.max.apply(null, vals.filter(isNum)));
+    add("line", { x1: L, x2: W - R, y1: y, y2: y, stroke: "var(--rule-strong)", "stroke-width": 1 });
+    add("rect", { x: bx, y: y - 5, width: Math.max(2, ex - bx), height: 10, fill: "var(--tint)" });
+    var colors = { bear: "var(--bear)", base: "var(--base)", bull: "var(--bull)" };
+    names.forEach(function (k, i) {
+      if (!isNum(vals[i])) return;
+      add("circle", { cx: x(vals[i]), cy: y, r: 6, fill: colors[k] });
+      add("text", { x: x(vals[i]), y: y - 14, "text-anchor": "middle" }, S[k].label + " " + money(vals[i]));
+    });
+    if (isNum(p.price_target)) {
+      add("path", { d: "M" + x(p.price_target) + " " + (y + 9) + " l-6 10 h12 z", fill: "var(--gold)" });
+      add("text", { x: x(p.price_target), y: y + 34, "text-anchor": "middle", class: "strong" }, "Fair value " + money(p.price_target));
+    }
+    if (isNum(p.price)) {
+      var px = x(p.price);
+      add("line", { x1: px, x2: px, y1: 14, y2: y + 14, stroke: "var(--ink)", "stroke-width": 1.5, "stroke-dasharray": "3 3" });
+      var anchor = px > W - 90 ? "end" : px < 90 ? "start" : "middle";
+      add("text", { x: anchor === "end" ? W - 2 : anchor === "start" ? 2 : px, y: 10, "text-anchor": anchor, class: "strong" }, "Price " + money(p.price));
+    }
+    return el("div", { class: "range" }, [svg]);
+  }
+
+  function statement(p, which) {
+    var f = p.financials; if (!f) return el("p", { text: "No financials." });
+    var n = f.n_hist, years = f.years;
+    var P = function (x) { return pct(x); }, X = function (x) { return mult(x); };
+    var defs = {
+      is: [["Revenue", "revenue", m, "strong"], ["Growth", "growth", P, "sub"], ["Gross profit", "gross_profit", m],
+        ["Gross margin", "gm", P, "sub"], ["Research & development", "rnd", m], ["SG&A", "sga", m],
+        ["Operating income", "ebit", m, "strong"], ["Operating margin", "ebit_margin", P, "sub"],
+        ["EBITDA", "ebitda", m], ["EBITDA margin", "ebitda_margin", P, "sub"],
+        ["Net income", "net_income", m, "strong"], ["Net margin", "ni_margin", P, "sub"],
+        ["Diluted EPS", "eps", money, "strong"], ["EPS growth", "eps_growth", P, "sub"], ["Diluted shares (m)", "shares", m1]],
+      bs: [["Cash & equivalents", "bs_cash", m], ["Short-term investments", "bs_sti", m], ["Accounts receivable", "bs_ar", m],
+        ["Inventory", "bs_inv", m], ["PP&E, net", "bs_ppe", m], ["Total assets", "bs_ta", m, "strong"],
+        ["Accounts payable", "bs_ap", m], ["Total debt", "bs_debt", m], ["Total liabilities", "bs_tl", m],
+        ["Total equity", "bs_eq", m, "strong"], ["Net debt / (net cash)", "bs_netdebt", m], ["Balance check", "bs_check", m, "sub"]],
+      cf: [["Cash from operations", "cf_cfo", m, "strong"], ["Capital expenditures", "cf_capex", m],
+        ["Free cash flow", "cf_fcf", m, "strong"], ["Dividends", "cf_div", m], ["Share repurchases", "cf_bb", m]],
+      rt: [["Return on invested capital", "r_roic", P, "strong"], ["FCF margin", "r_fcf_margin", P], ["FCF conversion", "r_fcf_conv", P],
+        ["Net debt / EBITDA", "r_nd_ebitda", function (x) { return isNum(x) ? x.toFixed(1) + "x" : "–"; }],
+        ["EBITDA / interest", "r_cover", X], ["Stock comp % of revenue", "r_sbc", P], ["Shareholder returns % of FCF", "r_payout", P]]
+    }[which];
+    var src = { is: f.income_statement, bs: f.balance_sheet, cf: f.cash_flow, rt: f.ratios }[which] || {};
+    var head = el("tr", null, [el("th", { text: which === "rt" ? "" : "$ millions" })].concat(years.map(function (y, i) {
+      return el("th", { class: (i >= n ? "e" : "") + (i === n ? " split" : ""), text: y });
+    })));
+    var body = defs.map(function (d) {
+      var v = src[d[1]] || [];
+      return el("tr", { class: d[3] || "" }, [el("td", { text: d[0] })].concat(years.map(function (y, i) {
+        return el("td", { class: (i >= n ? "e" : "") + (i === n ? " split" : ""), text: d[2](v[i]) });
+      })));
+    });
+    return el("div", { class: "tbl" }, [el("table", null, [el("thead", null, [head]), el("tbody", null, body)])]);
+  }
+
+  function sens(p, key, colFmt, title) {
+    var s = p.dcf && p.dcf[key]; if (!s || !s.values) return null;
+    var head = el("tr", null, [el("th", { text: "WACC" })].concat(s.cols.map(function (c) { return el("th", { text: colFmt(c) }); })));
+    var body = s.rows.map(function (w, i) {
+      return el("tr", null, [el("td", { text: pct(w) })].concat(s.values[i].map(function (v, j) {
+        var td = el("td", { text: money(v) });
+        if (isNum(v) && isNum(p.price)) td.style.background = v >= p.price ? "var(--heat-pos)" : "var(--heat-neg)";
+        if (i === 2 && j === 2) td.className = "base";
+        return td;
+      })));
+    });
+    return el("div", null, [el("h3", { text: title }),
+      el("div", { class: "tbl sens" }, [el("table", null, [el("thead", null, [head]), el("tbody", null, body)])])]);
+  }
+
   function render(p) {
     app.textContent = "";
     var idx = picks.indexOf(p);
-    document.getElementById("mast-meta").textContent = "Pick No. " + (picks.length - idx) + " · Week of " + longDate(p.date);
-    var fv = p.fair_value || {};
-    var up = p.upside;
+    var meta = document.getElementById("mast-meta");
+    meta.textContent = "";
+    [p.test ? "Test report" : "No. " + (picks.length - idx), longDate(p.date), p.price_as_of ? "Priced at close " + p.price_as_of : null]
+      .filter(Boolean).forEach(function (t) { meta.appendChild(el("span", { text: t })); });
+    var tb = document.getElementById("testbar"); tb.textContent = "";
+    if (p.test) tb.appendChild(el("div", { class: "testbar" }, [el("b", { text: "Test" }), p.test_note || "A test run of the weekly pipeline. Figures are sourced; see the notes under Sources."]));
 
-    var btn = el("button", { class: "btn", type: "button", id: "dl-" + p.id }, ["Download the Excel model"]);
-    var note = el("div", { class: "btn-note", role: "status" });
+    var d = p.dcf || {}, th = p.thesis || {}, S = p.scenarios || {};
+    var btn = el("button", { class: "dl", type: "button", id: "dl-" + p.id, text: "Download the Excel model" });
+    var note = el("div", { class: "dl-note", role: "status" });
     btn.addEventListener("click", function () { download(p, btn, note); });
 
-    var hero = el("div", { class: "hero" }, [
+    app.appendChild(el("div", { class: "title" }, [
       el("div", null, [
-        el("p", { class: "eyebrow", text: [p.exchange, p.sector, "Market cap " + bigM(p.market_cap_m)].filter(Boolean).join(" · ") }),
-        el("div", { class: "ticker-line" }, [
-          el("span", { class: "ticker", text: p.ticker }),
-          el("span", { class: "stance" + (/short|avoid/i.test(p.stance || "") ? " short" : ""), text: p.stance || "Long" })
-        ]),
-        el("h2", { class: "company", text: p.name, style: "border:0;padding:0" }),
-        el("p", { class: "headline", text: p.thesis && p.thesis.headline }),
-        el("p", { class: "summary", text: p.thesis && p.thesis.summary })
+        el("div", { class: "eyebrow" }, [el("span", { class: "tick", text: p.ticker }),
+          el("span", { class: "label", text: [p.exchange, p.sector].filter(Boolean).join(" · ") })]),
+        el("h2", { class: "company", text: p.name }),
+        el("p", { class: "headline", text: th.headline }),
+        el("p", { class: "summary", text: th.summary })
       ]),
-      el("div", { class: "valcard" }, [
-        el("div", { class: "kpis" }, [
-          el("div", { class: "kpi" }, [el("div", { class: "l", text: "Price" }), el("div", { class: "v", text: money(p.price) }), el("div", { class: "s", text: p.price_as_of ? "close " + p.price_as_of : "" })]),
-          el("div", { class: "kpi" }, [el("div", { class: "l", text: "Fair value" }), el("div", { class: "v", text: money(fv.blended) }), el("div", { class: "s", text: "DCF, blended" })]),
-          el("div", { class: "kpi" }, [el("div", { class: "l", text: "Upside" }), el("div", { class: "v " + (isNum(up) && up < 0 ? "down" : "up"), text: signed(up) }), el("div", { class: "s", text: "to fair value" })])
+      el("aside", { class: "rating", "aria-label": "Rating and fair value" }, [
+        el("div", { class: "label", text: "Rating" }),
+        el("div", { class: "stance", text: p.stance }),
+        el("div", { class: "pt-row" }, [
+          el("div", null, [el("div", { class: "label", text: "Fair value" }), el("div", { class: "pt", text: money(p.price_target) })]),
+          el("div", { class: "up", text: signed(p.upside) })
         ]),
-        fieldChart(p),
+        el("dl", null, [
+          el("dt", { text: "Price" }), el("dd", { text: money(p.price) }),
+          el("dt", { text: "Bear / Base / Bull" }), el("dd", { text: ["bear", "base", "bull"].map(function (k) { return S[k] ? "$" + Math.round(S[k].outputs.v_blend) : "–"; }).join(" / ") }),
+          el("dt", { text: "WACC" }), el("dd", { text: pct(d.wacc) })
+        ]),
+        el("p", { class: "note", text: "Fair value = probability-weighted DCF across three scenarios." }),
         btn, note
       ])
-    ]);
-    app.appendChild(hero);
-
-    var th = p.thesis || {};
-    app.appendChild(el("section", { id: "thesis" }, [
-      el("h2", { text: "The thesis" }),
-      el("div", { class: "pillars" }, (th.pillars || []).map(function (x, i) {
-        return el("div", { class: "pillar" }, [el("h3", { text: x.title }), el("p", { text: x.body })]);
-      })),
-      th.variant ? el("div", { class: "variant" }, [el("h3", { text: "Where we differ from the market" }), el("p", { text: th.variant })]) : null
     ]));
 
-    var tabsWrap = el("div", { class: "tabs", role: "tablist" });
-    var host = el("div");
-    var names = [["is", "Income statement"], ["bs", "Balance sheet"], ["cf", "Cash flow"]];
-    var show = function (k) {
-      host.textContent = ""; host.appendChild(statementTable(p, k));
-      Array.prototype.forEach.call(tabsWrap.children, function (b) { b.setAttribute("aria-selected", b.dataset.k === k ? "true" : "false"); });
+    var nd = p.net_debt_m;
+    app.appendChild(el("div", { class: "keydata" }, [
+      ["Market cap", bigM(p.market_cap_m)], ["Enterprise value", bigM(isNum(p.market_cap_m) && isNum(nd) ? p.market_cap_m + nd : null)],
+      [isNum(nd) && nd < 0 ? "Net cash" : "Net debt", bigM(isNum(nd) ? Math.abs(nd) : null)],
+      ["EV / EBITDA, next FY", mult(d.ev_ebitda_fy1)], ["P / E, next FY", mult(d.pe_fy1)], ["FCF yield, next FY", pct(d.fcf_yield_fy1)]
+    ].map(function (k) { return el("div", null, [el("div", { class: "label", text: k[0] }), el("div", { class: "v", text: k[1] })]); })));
+
+    app.appendChild(el("section", { id: "thesis" }, [
+      sectionHead("Investment thesis", (th.pillars || []).length + " points"),
+      el("div", { class: "pillars" }, (th.pillars || []).map(function (x) {
+        return el("div", { class: "pillar" }, [el("div", { class: "proof", text: x.proof }),
+          el("div", null, [el("h3", { text: x.title }), el("p", { text: x.body })])]);
+      })),
+      th.variant ? el("div", { class: "variant" }, [el("div", { class: "label", text: "Where we differ from consensus" }), el("p", { text: th.variant })]) : null
+    ]));
+
+    var total = ["bear", "base", "bull"].filter(function (k) { return S[k]; });
+    app.appendChild(el("section", { id: "scenarios" }, [
+      sectionHead("Scenarios", "Probability-weighted fair value " + money(p.price_target)),
+      el("div", { class: "scen" }, total.map(function (k) {
+        var s = S[k], o = s.outputs || {}, up = isNum(o.v_blend) && isNum(p.price) ? o.v_blend / p.price - 1 : null;
+        return el("div", null, [
+          el("div", { class: "top" }, [el("span", { class: "name", text: s.label, style: "color:var(--" + k + ")" }), el("span", { class: "prob", text: pct(s.probability, 0) + " probability" })]),
+          el("div", { class: "bar" }, [el("i", { style: "width:" + (s.probability * 100) + "%;background:var(--" + k + ")" })]),
+          el("div", { class: "val", text: money(o.v_blend) }),
+          el("div", { class: "ups " + cls(up), text: signed(up) + " vs price" }),
+          el("p", { class: "why", text: s.narrative }),
+          el("dl", null, [
+            el("dt", { text: "Revenue CAGR, 5 yr" }), el("dd", { text: pct(o.rev_cagr) }),
+            el("dt", { text: "Operating margin, yr 5" }), el("dd", { text: pct(o.ebit_margin_last) }),
+            el("dt", { text: "EPS, next FY" }), el("dd", { text: money(o.eps_fy1) }),
+            el("dt", { text: "Exit multiple · terminal g" }), el("dd", { text: mult(s.exit_multiple) + " · " + pct(s.terminal_growth) })
+          ])
+        ]);
+      })),
+      rangeChart(p)
+    ]));
+
+    var tabs = el("div", { class: "tabs", role: "tablist" }), host = el("div");
+    var names = [["is", "Income statement"], ["bs", "Balance sheet"], ["cf", "Cash flow"], ["rt", "Ratios"]];
+    function show(k) {
+      host.textContent = ""; host.appendChild(statement(p, k));
+      Array.prototype.forEach.call(tabs.children, function (b) { b.setAttribute("aria-selected", b.dataset.k === k ? "true" : "false"); });
       try { localStorage.setItem("fp-tab", k); } catch (e) {}
-    };
+    }
     names.forEach(function (nm) {
       var b = el("button", { type: "button", role: "tab", "data-k": nm[0], text: nm[1] });
       b.addEventListener("click", function () { show(nm[0]); });
-      tabsWrap.appendChild(b);
+      tabs.appendChild(b);
     });
     var saved = "is"; try { saved = localStorage.getItem("fp-tab") || "is"; } catch (e) {}
     app.appendChild(el("section", { id: "model" }, [
-      el("h2", { text: "The model" }), tabsWrap, host,
-      el("p", { class: "caption", text: "Actuals (A) from 10-K filings; shaded columns are estimates (E). The spreadsheet carries the full statements with every line linked, the assumptions sheet and the DCF." + (p.model_note ? " " + p.model_note : "") })
+      sectionHead("Financial model", "Base case · $ millions"),
+      tabs, host,
+      el("p", { class: "caption", text: "Actuals from 10-K filings; shaded columns are base-case projections. The Excel model carries every scenario, the full linked statements, the debt and share-count schedules, and the DCF." + (p.model_note ? " " + p.model_note : "") })
     ]));
-    show(/^(is|bs|cf)$/.test(saved) ? saved : "is");
+    show(/^(is|bs|cf|rt)$/.test(saved) ? saved : "is");
 
-    var d = p.dcf || {};
     app.appendChild(el("section", { id: "valuation" }, [
-      el("h2", { text: "Valuation" }),
-      el("div", { class: "assump" }, [
-        ["WACC", pct(d.wacc)], ["Terminal growth", pct(d.terminal_growth)], ["Exit EV/EBITDA", mult(d.exit_multiple)],
-        ["Terminal value % of EV", pct(d.tv_pct_ev, 0)], ["EV/EBITDA, next FY", mult(d.ev_ebitda_next)], ["P/E, next FY", mult(d.pe_next)]
-      ].map(function (a) { return el("div", null, [el("div", { class: "l", text: a[0] }), el("div", { class: "v", text: a[1] })]); })),
-      el("div", { class: "two valgrid" }, [
-        el("div", null, [
-          el("h3", { text: "Value per share: WACC against terminal growth" }),
-          sensTable(p),
-          el("p", { class: "caption", text: "Perpetuity-growth DCF. Green cells sit above today's price, red below; the outlined cell is the base case." })
-        ]),
-        el("div", null, [
-          el("h3", { text: "How the value is built" }),
-          el("p", { text: p.valuation_note || "" }),
-          el("p", { class: "caption", text: "Perpetuity " + money(fv.perpetuity) + " · exit multiple " + money(fv.exit) + " · blended " + money(fv.blended) + ". Stock compensation is treated as a cash cost." })
-        ])
-      ])
+      sectionHead("Valuation", "Base case DCF"),
+      el("div", { class: "vtiles" }, [
+        ["WACC", pct(d.wacc)], ["Cost of equity", pct(d.cost_of_equity)], ["Terminal growth", pct(d.terminal_growth)],
+        ["Exit EV / EBITDA", mult(d.exit_multiple)], ["Terminal value % of EV", pct(d.tv_pct_ev, 0)], ["EV / EBITDA, last FY", mult(d.ev_ebitda_ltm)]
+      ].map(function (a) { return el("div", null, [el("div", { class: "label", text: a[0] }), el("div", { class: "v", text: a[1] })]); })),
+      el("div", { class: "vgrid" }, [
+        sens(p, "sens_growth", function (x) { return "g " + pct(x); }, "Perpetuity method: WACC × terminal growth"),
+        sens(p, "sens_exit", function (x) { return mult(x); }, "Exit method: WACC × EV/EBITDA multiple")
+      ]),
+      el("p", { class: "caption", text: "Value per share. Green is above today's price, red below; the outlined cell is the base case. Stock compensation is treated as a cash cost." }),
+      p.valuation_note ? el("p", { class: "vnote", text: p.valuation_note }) : null
     ]));
 
     app.appendChild(el("section", { id: "catalysts" }, [
-      el("div", { class: "two" }, [
-        el("div", null, [
-          el("h2", { text: "Catalysts" }),
-          el("ul", { class: "plain" }, (p.catalysts || []).map(function (c) {
-            return el("li", null, [el("span", { class: "when", text: c.when }), el("span", { text: c.what })]);
-          }))
-        ]),
-        el("div", null, [
-          el("h2", { text: "Risks" }),
-          el("ul", { class: "plain" }, (p.risks || []).map(function (r) {
-            return el("li", { class: "risk", style: "grid-template-columns:1fr" }, [el("div", null, [el("b", { text: r.risk }), el("span", { text: r.mitigant })])]);
-          })),
-          (p.kill_criteria || []).length ? el("div", { class: "kill" }, [
-            el("h3", { text: "We'd drop the idea if" }),
-            el("ul", null, p.kill_criteria.map(function (k) { return el("li", { text: k }); }))
-          ]) : null
-        ])
+      el("div", { class: "cr" }, [
+        el("div", null, [sectionHead("Catalysts"),
+          el("ul", { class: "timeline" }, (p.catalysts || []).map(function (c) { return el("li", null, [el("span", { class: "when", text: c.when }), el("span", { text: c.what })]); }))]),
+        el("div", null, [sectionHead("Risks"),
+          el("ul", { class: "risks" }, (p.risks || []).map(function (r) { return el("li", null, [el("b", { text: r.risk }), el("span", { text: r.mitigant })]); })),
+          (p.kill_criteria || []).length ? el("div", { class: "kill" }, [el("div", { class: "label", text: "We exit if" }),
+            el("ul", null, p.kill_criteria.map(function (k) { return el("li", { text: k }); }))]) : null])
       ])
     ]));
 
     if ((p.sources || []).length) app.appendChild(el("section", { id: "sources" }, [
-      el("h2", { text: "Sources" }),
-      el("ol", { class: "sources" }, p.sources.map(function (s) {
-        return el("li", null, [el("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label || s.url })]);
-      }))
+      sectionHead("Sources"),
+      el("ol", { class: "sources" }, p.sources.map(function (s) { return el("li", null, [el("a", { href: s.url, target: "_blank", rel: "noopener", text: s.label || s.url })]); }))
     ]));
 
-    Array.prototype.forEach.call(document.querySelectorAll("#archive tbody tr"), function (tr) {
-      tr.setAttribute("aria-current", tr.dataset.id === p.id ? "true" : "false");
-    });
+    Array.prototype.forEach.call(document.querySelectorAll("#archive tbody tr"), function (tr) { tr.setAttribute("aria-current", tr.dataset.id === p.id ? "true" : "false"); });
   }
 
   var arch = document.getElementById("archive");
-  arch.appendChild(el("thead", null, [el("tr", null, ["Week of", "Ticker", "Company", "Price at pick", "Fair value", "Upside"].map(function (h) { return el("th", { text: h }); }))]));
+  arch.appendChild(el("thead", null, [el("tr", null, ["Date", "Ticker", "Company", "Rating", "Price", "Fair value", "Upside"].map(function (h) { return el("th", { text: h }); }))]));
   arch.appendChild(el("tbody", null, picks.map(function (p) {
     var tr = el("tr", { tabindex: "0", "data-id": p.id }, [
-      el("td", { text: longDate(p.date) }), el("td", { text: p.ticker }), el("td", { text: p.name, style: "text-align:left;font-family:var(--sans)" }),
-      el("td", { text: money(p.price) }), el("td", { text: money(p.fair_value && p.fair_value.blended) }),
-      el("td", { class: isNum(p.upside) && p.upside < 0 ? "down" : "up", text: signed(p.upside) })
+      el("td", { text: longDate(p.date) + (p.test ? " (test)" : "") }), el("td", { text: p.ticker, style: "text-align:left;font-weight:600" }),
+      el("td", { text: p.name, style: "text-align:left" }), el("td", { text: p.stance, style: "text-align:left" }),
+      el("td", { text: money(p.price) }), el("td", { text: money(p.price_target) }), el("td", { class: cls(p.upside), text: signed(p.upside) })
     ]);
     var go = function () { render(p); try { history.replaceState(null, "", "#" + p.id); } catch (e) {} window.scrollTo({ top: 0 }); };
     tr.addEventListener("click", go);
@@ -455,7 +520,6 @@ ul.plain .when { font: 500 12px/1.6 var(--mono); color: var(--muted); }
     return tr;
   })));
   document.getElementById("archive-section").hidden = false;
-
   var want = (location.hash || "").slice(1);
   render(picks.filter(function (p) { return p.id === want; })[0] || picks[0]);
 })();

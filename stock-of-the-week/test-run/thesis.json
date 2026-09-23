@@ -1,0 +1,58 @@
+{
+ "date": "2026-09-23",
+ "name": "Trimble Inc.",
+ "exchange": "NASDAQ",
+ "sector": "Construction & geospatial software",
+ "stance": "Watch",
+ "test": true,
+ "test_note": "Pipeline test, run 23 Sep 2026. This session could not reach the SEC API, so Trimble's FY2024–FY2025 financials were collected from its 10-K and earnings releases by web search and checked against four accounting identities. Scheduled Friday runs pull 10-K data directly from SEC XBRL.",
+ "thesis": {
+  "headline": "Trimble's software shift is real, with 12% organic ARR growth and a 30% EBITDA margin a year early, but at $57.33 the stock already prices our base case; we would buy below $53.",
+  "summary": "Trimble sells construction, surveying and logistics software and field hardware; recurring revenue now runs at $2.509B, 64% of the $3.925B FY2026 revenue guide. The shares fell to $57.33 after a $562.0M non-cash goodwill impairment in Transportation & Logistics and a Field Systems product swap that trims 400–500bp from that segment's ARR growth in H2 2026. Our three-scenario DCF gives a probability-weighted fair value of $61.19, 6.7% above the price and short of our 10% hurdle. We rate it Watch: the business is compounding, but the price is fair, not cheap.",
+  "pillars": [
+   {"title": "Recurring revenue is two-thirds of sales and growing 12%", "proof": "$2.509B ARR, +12%",
+    "body": "Q2 2026 ARR reached $2.509B, up 12% organically, with AECO at 14%, Field Systems at 12% and Transportation at 7%. Management raised FY2026 revenue guidance by $50M to $3.925B, 9.4% above FY2025's $3,587.3M; our base case uses that figure and fades growth to 6% by FY2030."},
+   {"title": "Margins are expanding from mix, not cost cuts", "proof": "65.1% → 69.1%",
+    "body": "GAAP gross margin rose from 65.1% in FY2024 to 69.1% in FY2025 as lower-margin hardware shrank, lifting GAAP operating margin from 12.5% to 16.5%. Management now expects a 30% adjusted EBITDA margin in 2026, one year before its 2027 Investor Day target. The base case adds 50bp of gross margin a year and cuts SG&A from 31.5% to 27.5% of revenue, reaching 24.5% GAAP operating margin in FY2030."},
+   {"title": "Cash returns can shrink the share count 11% by FY2030", "proof": "$1B buyback, 7.5% of cap",
+    "body": "Free cash flow was $502M in H1 2026, and the new $1B repurchase authorization equals 7.5% of the $13.4B market capitalization. No shares were bought in Q2 2026. We model $400M of buybacks in FY2026 and $600–750M a year after, taking diluted shares from 234.0M to 207.2M by FY2030 while net debt/EBITDA falls from 1.44x to net cash by FY2028."},
+   {"title": "The price already discounts the base case", "proof": "$61.19 vs $57.33",
+    "body": "At $57.33 the stock trades at 15.6x FY2026E GAAP EBITDA of $930M and 24.2x FY2026E GAAP EPS of $2.37. Our probability-weighted value of $61.19 blends a bear case at $36.17 (25%), a base case at $61.65 (50%) and a bull case at $85.29 (25%). That is 6.7% upside, under the 10% bar for a Long; at $53.20 the upside reaches 15%."}
+  ],
+  "variant": "The consensus target of $81.78 implies 43% upside; ours is $61.19. The gap is method, not operations: consensus capitalizes non-GAAP EPS of $3.65, which excludes $146.5M of stock comp (4.1% of revenue) and about $172M of acquired-intangible amortization. We charge stock comp as a cash cost and discount at a 10.36% WACC (beta 1.21, 10-year Treasury at 4.93%); at a 9.36% WACC our base perpetuity value is still only $65.82."
+ },
+ "catalysts": [
+  {"when": "Nov 2026", "what": "Q3 2026 results against guidance of $953–978M revenue and $0.83–0.88 non-GAAP EPS; the first full quarter of the Field Systems product swap."},
+  {"when": "H2 2026", "what": "Outcome of the Transportation & Logistics strategic review; the segment grew ARR 7% and carried the $562.0M goodwill impairment."},
+  {"when": "Q4 2026", "what": "Use of the $1B repurchase authorization after zero buybacks in Q2 2026; our base case assumes $400M in FY2026."},
+  {"when": "Feb 2027", "what": "FY2026 results and FY2027 guidance; the base case needs roughly $4.24B of FY2027 revenue (+8%) and a 20.5% GAAP operating margin."}
+ ],
+ "risks": [
+  {"risk": "The Field Systems product swap runs long", "mitigant": "Management sized the drag at 400–500bp of segment ARR growth, concentrated in H2 2026, with the in-house product ramping in 2027. The bear case assumes total revenue growth of only 4% from FY2027 and is worth $36.17."},
+  {"risk": "AI tools compress construction-software pricing", "mitigant": "Trimble Connect added over 1M projects and handled about 30B API calls in Q2 2026, so the moat is the workflow data, not seat count. The bear case holds GAAP operating margin near 18% through FY2030."},
+  {"risk": "T&L is sold cheaply or written down again", "mitigant": "The $562.0M impairment is non-cash and already booked. T&L is the slowest-growing segment (7% ARR growth), so a sale would lift the group growth rate."},
+  {"risk": "Higher rates lower the value", "mitigant": "The 10-year Treasury is at 4.93%. Each +50bp of WACC takes $3.85–4.39 off the base perpetuity value (from $56.37 to $52.52 at 10.86%), which the sensitivity grid shows in full."}
+ ],
+ "kill_criteria": [
+  "Organic ARR growth below 9% in any quarter of FY2027 (Q2 2026: 12%).",
+  "GAAP gross margin below 69.1%, the FY2025 level, for two consecutive quarters.",
+  "FY2027 revenue guidance below $4.10B, 4.5% above the FY2026 guide midpoint."
+ ],
+ "valuation_note": "Why Trimble: this week's screen also turned up Campbell's (−7% on FY2027 EPS guidance of $1.65–1.80), Nucor and Steel Dynamics (−6% and −4% on Q3 guides) and PayPal (−15% after the Stripe/Advent bid lapsed). Trimble showed the widest gap between reported progress (guidance raised, ARR +12%) and share price (a 20% decline despite the raised guidance); it was the only candidate modelled in this test run. Four assumptions drive the value. The base-case exit multiple of 14.0x FY2030 EBITDA is 1.6 turns below today's 15.6x forward multiple. Terminal growth is 2.75%, against 12% ARR growth today. WACC is 10.36%. Stock comp is treated as a cost. The model's FY2026 free cash flow of $914M is above management's guide of about 0.9x non-GAAP net income (≈$770M) because one-time restructuring cash costs are not modelled separately; the gap is worth about $0.62 per share.",
+ "model_note": "FY2024 ended 3 Jan 2025 and FY2025 ended 2 Jan 2026. Derived figures, since this test couldn't reach SEC XBRL: FY2025 PP&E ($185.5M, rolled forward from FY2024), FY2025 capex (CFO − FCF = $25.0M), FY2024–25 financing cash flow (from the change in cash), and diluted shares (net income ÷ diluted EPS). FY2026E excludes the $562.0M non-cash T&L goodwill impairment booked in Q2 2026.",
+ "sources": [
+  {"label": "Trimble: Q2 2026 results and raised FY2026 guidance (12 Aug 2026)", "url": "https://www.prnewswire.com/news-releases/trimble-announces-second-quarter-2026-results-and-raises-full-year-guidance-302849103.html"},
+  {"label": "Trimble: Q4 and full-year 2025 results (10 Feb 2026)", "url": "https://investor.trimble.com/news/news-details/2026/Trimble-Announces-Fourth-Quarter-and-Full-Year-2025-Results-and-Initiates-2026-Guidance/default.aspx"},
+  {"label": "Trimble: Q4 and full-year 2024 results", "url": "https://www.prnewswire.com/news-releases/trimble-announces-fourth-quarter-and-full-year-2024-results-and-initiates-2025-guidance-302379709.html"},
+  {"label": "Trimble Form 10-K for fiscal 2025 (SEC)", "url": "https://www.sec.gov/Archives/edgar/data/864749/000086474926000015/trmb-20260102.htm"},
+  {"label": "Trimble Form 10-K for fiscal 2024 (SEC)", "url": "https://www.sec.gov/Archives/edgar/data/864749/000086474925000090/trmb-20250103.htm"},
+  {"label": "Trimble Form 10-Q, Q2 2026 (SEC)", "url": "https://www.sec.gov/Archives/edgar/data/0000864749/000086474926000108/trmb-20260703.htm"},
+  {"label": "Q2 2026 earnings call transcript (Motley Fool)", "url": "https://www.fool.com/earnings/call-transcripts/2026/08/19/trimble-trmb-q2-2026-earnings-call-transcript/"},
+  {"label": "Q4 2025 slides: FY2025 cash flow and $277M divestiture tax (Investing.com)", "url": "https://www.investing.com/news/company-news/trimble-q4-2025-slides-revenue-beats-guidance-as-margins-expand-significantly-93CH-4497066"},
+  {"label": "Share price: $57.33 close, 21 Sep 2026", "url": "https://www.ad-hoc-news.de/boerse/news/corporate-news/trimble-inc-stock-trades-at-usd-57-33-with-valuation-under-pressure/70155132"},
+  {"label": "10-year Treasury at 4.93%, 22 Sep 2026 (CNBC)", "url": "https://www.cnbc.com/2026/09/22/treasury-yield-us-bond-market-trump.html"},
+  {"label": "Beta: Yahoo 1.58, MarketChameleon 0.92, Macroaxis 1.13 (average 1.21)", "url": "https://www.macroaxis.com/invest/beta/TRMB"},
+  {"label": "Consensus target $81.78 (MarketScreener)", "url": "https://www.marketscreener.com/quote/stock/TRIMBLE-INC-11147/consensus/"},
+  {"label": "Week's decliners used in the screen (CNBC)", "url": "https://www.cnbc.com/2026/09/03/stock-market-today-live-updates.html"}
+ ]
+}

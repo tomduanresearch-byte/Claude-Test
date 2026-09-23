@@ -3,7 +3,8 @@
 An agent that picks one stock every Friday after the US close and publishes:
 
 - an investment thesis,
-- a linked three-statement model with a DCF valuation, as a downloadable Excel file.
+- a linked three-statement model with bear, base and bull scenarios and a DCF
+  valuation, as a downloadable Excel file.
 
 Both go on one private page, which also keeps the archive of every past pick.
 
@@ -47,35 +48,57 @@ prompt only points at them.
 
 | Sheet | What it holds |
 | --- | --- |
-| Cover | Summary outputs and whether the balance sheet balances |
-| DCF | WACC build, unlevered FCF, perpetuity and exit-multiple values, a WACC × growth sensitivity grid, market multiples |
-| Assumptions | Yellow input cells for five projection years |
-| Income Statement, Balance Sheet, Cash Flow | Five years of 10-K actuals and five years of projections |
+| Cover | Outputs and checks: balance sheet balances, cash stays positive |
+| Scenarios | The selector (cell C5): 1 = Bear, 2 = Base, 3 = Bull. Also each case's probability, terminal growth, exit multiple and narrative, and a side-by-side table of every scenario's outputs with the probability-weighted value. |
+| Assumptions | For each scenario-driven line: a live row plus Bear/Base/Bull input rows. Also the shared drivers. |
+| Income Statement | Includes a share-count schedule: stock-comp issuance, and buybacks retired at the current price grown at the cost of equity |
+| Balance Sheet | Includes a debt schedule and checks |
+| Cash Flow | Linked to the income statement and balance sheet |
+| Ratios | ROIC, ROE, FCF margin and conversion, leverage, coverage, working-capital days |
+| DCF | WACC build, unlevered FCF with an optional mid-year convention, perpetuity and exit-multiple values, trading multiples, and two sensitivity grids (WACC × growth, WACC × exit multiple) |
+| Data | Every source figure and where it came from |
 
 **How the statements link.** Cash on the balance sheet comes from the cash-flow
 statement. Equity rolls forward on net income, stock comp, dividends and
-buybacks. PP&E rolls forward on capex and D&A. Working capital runs off days and
-revenue ratios.
+buybacks. PP&E rolls forward on capex and D&A. Debt follows its schedule.
 
-**Checks.** Every projected cell is a live formula. The build recalculates the
-workbook with LibreOffice and fails if any year doesn't balance or any formula
-errors.
+**Checks.** The build calculates each scenario in turn with LibreOffice. It fails
+if any year of any scenario doesn't balance or any formula errors.
 
-**Simplifications:**
+**Fair value** on the page is the probability-weighted value across the three
+scenarios.
 
-- The balance sheet is condensed. Its "other" lines are plugged so they tie to
-  reported totals.
-- Interest is charged on opening balances, which avoids circular references.
-- The DCF discounts year-end cash flows.
-- Stock comp is treated as a real cash cost.
+**The thesis is checked too.** The `page` step rejects a thesis that doesn't meet
+all of these:
+
+- every pillar has a numeric proof,
+- every catalyst is dated,
+- every kill criterion has a measurable threshold,
+- it contains no filler phrases.
+
+**Delivery.** Artifacts can't host `.xlsx` files, so the workbook is embedded in
+the page. The download button rebuilds it through the page's `downloads`
+permission.
 
 ```bash
-pip install openpyxl            # plus LibreOffice Calc for the recalculation
+pip install openpyxl            # plus: apt-get install -y libreoffice-calc
 python3 build_model.py fetch MSFT --out work
-# edit work/assumptions.json
+# edit work/assumptions.json (scenarios + shared drivers + market inputs)
 python3 build_model.py build work --xlsx work/model.xlsx
-python3 build_model.py page page.html work --thesis work/thesis.json
+python3 build_model.py page page.html work --thesis work/thesis.json --xlsx work/model.xlsx
 ```
+
+## Test run
+
+`test-run/` holds the inputs and outputs of the first end-to-end test, on
+Trimble (TRMB), 23 Sep 2026. It's published separately at
+<https://claude.ai/artifact/LDQvDTSR4sR7PX6tr9BR1p>, so the live archive stays
+clean.
+
+This session couldn't reach the SEC API. The historicals were therefore collected
+from Trimble's 10-K and earnings releases by web search, and checked against four
+accounting identities. The derived items are listed in `thesis.json` →
+`model_note`.
 
 ## Requirements on the environment
 

@@ -1,0 +1,240 @@
+{
+ "scenarios": {
+  "bear": {
+   "probability": 0.25,
+   "terminal_growth": 0.02,
+   "exit_ev_ebitda": 11.0,
+   "narrative": "FY26 lands at the $3.90B low end of guidance, the Field Systems product swap costs a further 400\u2013500bp of segment ARR growth into 2027, and AI tools cap pricing: revenue growth halves to 4% from FY27 and GAAP operating margin stalls near 19%.",
+   "revenue_growth": [
+    0.087,
+    0.04,
+    0.04,
+    0.035,
+    0.03
+   ],
+   "gross_margin": [
+    0.695,
+    0.695,
+    0.695,
+    0.695,
+    0.695
+   ],
+   "rnd_pct_revenue": [
+    0.18,
+    0.18,
+    0.18,
+    0.18,
+    0.18
+   ],
+   "sga_pct_revenue": [
+    0.315,
+    0.315,
+    0.31,
+    0.31,
+    0.31
+   ],
+   "capex_pct_revenue": [
+    0.009,
+    0.009,
+    0.009,
+    0.009,
+    0.009
+   ]
+  },
+  "base": {
+   "probability": 0.5,
+   "terminal_growth": 0.0275,
+   "exit_ev_ebitda": 14.0,
+   "narrative": "Revenue meets the $3.925B FY26 guide (+9.4%) and growth steps down 0.5\u20131pt a year to 6% by FY30 as ARR (12% organic) becomes a larger share; mix lifts gross margin 50bp a year and SG&A leverage takes GAAP operating margin from 16.5% to about 24.5%.",
+   "revenue_growth": [
+    0.094,
+    0.08,
+    0.075,
+    0.07,
+    0.06
+   ],
+   "gross_margin": [
+    0.7,
+    0.705,
+    0.71,
+    0.715,
+    0.72
+   ],
+   "rnd_pct_revenue": [
+    0.175,
+    0.175,
+    0.175,
+    0.175,
+    0.175
+   ],
+   "sga_pct_revenue": [
+    0.305,
+    0.295,
+    0.285,
+    0.28,
+    0.275
+   ],
+   "capex_pct_revenue": [
+    0.008,
+    0.008,
+    0.008,
+    0.008,
+    0.008
+   ]
+  },
+  "bull": {
+   "probability": 0.25,
+   "terminal_growth": 0.0325,
+   "exit_ev_ebitda": 17.0,
+   "narrative": "The in-house Field Systems product ramps in 2027, AECO ARR holds its 14% pace and T&L is sold: growth runs 9\u201310% through FY29, gross margin reaches 73.5% and GAAP operating margin passes 28% by FY30.",
+   "revenue_growth": [
+    0.1,
+    0.1,
+    0.095,
+    0.09,
+    0.08
+   ],
+   "gross_margin": [
+    0.705,
+    0.715,
+    0.725,
+    0.73,
+    0.735
+   ],
+   "rnd_pct_revenue": [
+    0.17,
+    0.17,
+    0.165,
+    0.165,
+    0.165
+   ],
+   "sga_pct_revenue": [
+    0.3,
+    0.285,
+    0.275,
+    0.265,
+    0.26
+   ],
+   "capex_pct_revenue": [
+    0.008,
+    0.008,
+    0.008,
+    0.008,
+    0.008
+   ]
+  }
+ },
+ "other_opex_pct_revenue": [
+  0.035,
+  0.03,
+  0.028,
+  0.026,
+  0.025
+ ],
+ "da_pct_revenue": [
+  0.052,
+  0.05,
+  0.048,
+  0.046,
+  0.045
+ ],
+ "sbc_pct_revenue": [
+  0.04,
+  0.04,
+  0.04,
+  0.04,
+  0.04
+ ],
+ "tax_rate": [
+  0.17,
+  0.17,
+  0.17,
+  0.17,
+  0.17
+ ],
+ "dso_days": [
+  85.0,
+  85.0,
+  85.0,
+  85.0,
+  85.0
+ ],
+ "dio_days": [
+  60.0,
+  60.0,
+  60.0,
+  60.0,
+  60.0
+ ],
+ "dpo_days": [
+  55.0,
+  55.0,
+  55.0,
+  55.0,
+  55.0
+ ],
+ "other_ca_pct_revenue": [
+  0.094,
+  0.094,
+  0.094,
+  0.094,
+  0.094
+ ],
+ "other_cl_pct_revenue": [
+  0.372,
+  0.372,
+  0.372,
+  0.372,
+  0.372
+ ],
+ "interest_rate_on_debt": [
+  0.053,
+  0.053,
+  0.053,
+  0.053,
+  0.053
+ ],
+ "interest_rate_on_cash": [
+  0.035,
+  0.035,
+  0.035,
+  0.035,
+  0.035
+ ],
+ "net_debt_issuance_musd": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "dividend_payout_pct_net_income": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "buybacks_musd": [
+  400.0,
+  600.0,
+  650.0,
+  700.0,
+  750.0
+ ],
+ "gross_dilution_pct": [
+  0.01,
+  0.01,
+  0.01,
+  0.01,
+  0.01
+ ],
+ "share_price": 57.33,
+ "share_price_as_of": "2026-09-21",
+ "diluted_shares_m": 234.0,
+ "risk_free_rate": 0.0493,
+ "equity_risk_premium": 0.05,
+ "beta": 1.21,
+ "pretax_cost_of_debt": 0.053,
+ "mid_year_convention": 1
+}

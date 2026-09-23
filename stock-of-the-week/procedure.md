@@ -84,51 +84,94 @@ model is annual, so year-to-date trends have to inform your assumptions.
 
 ## 4. Set the assumptions
 
-Edit `work/assumptions.json`. Each array holds five projection years.
+Edit `work/assumptions.json`. Every array holds five projection years.
 
-**Operating assumptions.** Growth, margins, capex, working capital and tax each
-need a reason: guidance, recent quarters, peers or structural change. Record the
-key reasons for `valuation_note`.
+### Scenarios
 
-**Market inputs.** Look each of these up with WebSearch and cross-check it:
+`scenarios` holds a `bear`, `base` and `bull` case. Each one sets:
+
+| Key | What it is |
+| --- | --- |
+| `probability` | The three must sum to 1. Usually 25/50/25; move off that only with a stated reason. |
+| `revenue_growth`, `gross_margin`, `rnd_pct_revenue`, `sga_pct_revenue`, `capex_pct_revenue` | Five values each |
+| `terminal_growth`, `exit_ev_ebitda` | The case's terminal assumptions |
+| `narrative` | One sentence on what has to be true, with numbers |
+
+**Anchor each case to something observable:**
+
+- **Base:** management guidance for the current year, then a fade you can defend.
+- **Bear:** the low end of guidance, then the specific risk that plays out.
+- **Bull:** the specific upside that plays out.
+
+The fetch step's mechanical defaults are a starting point only. Replace them.
+
+**Example `narrative`:** "FY26 lands at the $3.90B low end of guidance and growth
+halves to 4% from FY27 as the product swap slips; GAAP operating margin stalls
+near 19%."
+
+### Shared drivers
+
+These apply to every scenario:
+
+- other operating expense and D&A as % of revenue,
+- stock comp as % of revenue, tax rate,
+- DSO, DIO and DPO, other current assets and liabilities as % of revenue,
+- interest rates on debt and cash, net debt issuance,
+- dividend payout, buybacks (`buybacks_musd`),
+- `gross_dilution_pct`, the share issuance from stock comp.
+
+**Buybacks must fit the cash.** The build warns, and the publish step refuses, if
+projected cash goes negative in any scenario.
+
+### Market inputs
+
+Look each of these up with WebSearch and cross-check it:
 
 | Input | Where it comes from |
 | --- | --- |
-| `share_price` | Today's close, confirmed in two sources |
-| `share_price_as_of` | Today's date (YYYY-MM-DD) |
+| `share_price` | The latest close, confirmed in two sources |
+| `share_price_as_of` | That close's date (YYYY-MM-DD) |
 | `risk_free_rate` | The current 10-year Treasury yield |
-| `beta` | A published 5-year monthly beta; stay in 0.6–1.8 unless there's a reason |
-| `diluted_shares_m` | The latest 10-Q cover share count plus dilution, in millions |
+| `beta` | Published 5-year monthly betas. If sources disagree, use their average and list each one. |
+| `diluted_shares_m` | The latest 10-Q cover share count or the company's diluted share guidance, in millions |
+| `equity_risk_premium` | About 5% |
+| `pretax_cost_of_debt` | The company's actual borrowing cost (interest expense ÷ debt) |
+| `mid_year_convention` | 1 (on) |
 
-**Valuation inputs.**
+**Terminal growth** is 2–3% for most companies; above 3.5% needs a strong reason.
 
-- `equity_risk_premium`: about 5%.
-- `pretax_cost_of_debt`: the company's actual borrowing cost if it's known.
-- `terminal_growth`: 2–3% for most companies. Above 3.5% needs a strong reason.
-- `exit_ev_ebitda`: anchor it to the company's own 5-year range and to its peers.
+**The exit multiple** is anchored to today's forward EV/EBITDA (the model shows it)
+and to peers. **The base case should not exceed today's multiple.**
 
-**Be honest with yourself.** Set the assumptions you believe first, then look at
-the answer. Never tune inputs to reach a target price.
+### Honesty rule
 
-- If honest assumptions give less than 10% upside, the idea isn't a buy. Drop it
-  and go to the next candidate, up to three candidates in total.
-- If none of the three works, publish the best one with `"stance": "Watch"` and
-  say plainly that it isn't cheap enough yet.
+Set the assumptions you believe first, then look at the answer. Never tune inputs
+to reach a target price. **Fair value is the probability-weighted value across the
+three scenarios.**
+
+- If weighted upside is below 10%, the idea isn't a Long. Drop it and try the next
+  candidate, up to three candidates in total.
+- If none clears the bar, publish the best one with `"stance": "Watch"`. State the
+  price at which it becomes a buy: weighted value ÷ 1.15.
 
 ## 5. Build and check the model
 
 ```bash
-python3 build_model.py build work --xlsx "work/model.xlsx"
+python3 build_model.py build work --xlsx work/model.xlsx
 ```
 
-The build fails loudly if any year doesn't balance or any formula errors. Fix the
-cause; never work around a failed check.
+The build calculates every scenario in turn. It fails if any year of any scenario
+doesn't balance or any formula errors. **Fix the cause; never work around a failed
+check.**
 
-Then read `work/summary.json` and check:
+Then read `work/summary.json` and check each of these:
 
 - terminal value is under about 80% of EV,
 - the implied exit multiple from the perpetuity method is sane,
-- the projections don't show absurd jumps.
+- no projection jumps without a reason,
+- FY+1 free cash flow is close to management's guidance, if the company gives any.
+
+Explain any gap in `valuation_note`, in dollars per share.
 
 ## 6. Write the thesis
 
@@ -138,56 +181,63 @@ Write `work/thesis.json`:
 {
   "date": "YYYY-MM-DD (today)",
   "name": "Company name as it should appear",
-  "exchange": "NYSE | NASDAQ | ...",
-  "sector": "Short sector / industry label",
+  "exchange": "NYSE | NASDAQ",
+  "sector": "Specific industry label",
   "stance": "Long | Watch",
   "thesis": {
-    "headline": "One sentence: what the market is missing and why it matters",
-    "summary": "3–4 sentences: the business, the setup, the call, the value",
+    "headline": "One sentence with the call and at least one figure",
+    "summary": "3–4 sentences: the business in numbers, why the price is where it is, the value, the call",
     "pillars": [
-      {"title": "Short label", "body": "2–3 sentences with specific numbers and where they come from"}
+      {"title": "A claim in plain words",
+       "proof": "The one number that proves it, e.g. \"$2.509B ARR, +12%\"",
+       "body": "2–3 sentences, each figure with its period, ending with what the model assumes"}
     ],
-    "variant": "2–3 sentences: what consensus believes, what you believe, and the evidence"
+    "variant": "What consensus believes (with its number), what we believe (with ours), and why they differ"
   },
-  "catalysts": [{"when": "Mon YYYY or Qn YYYY", "what": "Specific dated event"}],
-  "risks": [{"risk": "Specific risk", "mitigant": "Why it may not bite, or how you would see it coming"}],
-  "kill_criteria": ["Observable condition that would prove the thesis wrong"],
-  "valuation_note": "Why this pick over the runners-up; the 3–4 assumptions that drive value and how they compare with history and guidance",
-  "model_note": "Optional: any data caveat, e.g. a restated year or an unusual XBRL tag",
-  "sources": [{"label": "Company 10-K FY2025", "url": "https://..."}]
+  "catalysts": [{"when": "Nov 2026", "what": "Dated event and the number to watch"}],
+  "risks": [{"risk": "Specific risk", "mitigant": "The evidence against it, or which scenario already prices it"}],
+  "kill_criteria": ["A measurable threshold, e.g. \"Organic ARR growth below 9% in any quarter of FY2027\""],
+  "valuation_note": "Why this pick over the named runners-up; the 3–4 assumptions that drive value, compared with history and guidance; any model-versus-guidance gap in $/share",
+  "model_note": "Data caveats: derived figures, excluded one-offs, fiscal-year quirks",
+  "sources": [{"label": "What it is and its date", "url": "https://..."}]
 }
 ```
 
-**Writing standard.**
+**The `page` step checks the thesis automatically and rejects it** unless it meets
+all of these:
 
-- 3–4 pillars. 3–5 catalysts. 3–5 risks. 2–3 kill criteria.
-- Every figure is specific (a number with a period) and traceable to a source.
-- `sources` lists every page you relied on, including the SEC companyfacts URL.
-- Plain, direct sentences. No hype and no hedging filler. This is a research note,
-  not a pitch.
+- 3–4 pillars, each with a numeric `proof` and at least two figures in its `body`.
+- A figure in both the headline and `variant`.
+- 3–5 catalysts, each with a dated `when`.
+- 3–5 risks.
+- 2–3 kill criteria, each with a measurable threshold.
+- At least 4 sources.
+- No filler phrases such as "well-positioned", "robust", "compelling", "tailwinds",
+  "we believe", "significant upside", "market leader" or "going forward". The full
+  list is `VAGUE` in `build_model.py`.
+
+**Writing standard.** Every claim is a number with a period and a source. Say what
+the company did, what the model assumes and what would prove it wrong. No
+adjectives doing the work of evidence.
 
 ## 7. Publish
 
 ```bash
-python3 build_model.py page page.html work --thesis work/thesis.json
+python3 build_model.py page page.html work --thesis work/thesis.json --xlsx work/model.xlsx
 ```
 
-This adds the pick to the page's data block and prints the model's published path
-(`models/<date>-<TICKER>.xlsx`).
+This checks the thesis, adds the pick to the page's data block, and embeds the
+workbook in the page. The page's download button rebuilds the `.xlsx` from it,
+because artifacts can't host `.xlsx` files directly.
 
 Then call the Artifact tool:
 
 - `action: "publish"`
 - `url`: `PAGE`
 - `file_path`: `$W/page.html`
-- `files`:
 
-  ```json
-  {"models/<date>-<TICKER>.xlsx": {"from": "$W/work/model.xlsx", "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"}}
-  ```
-
-Omit `capabilities` and `icon` so the page keeps its settings. Files you leave out
-of `files` (earlier models, `tools/`) are kept.
+Omit `files`, `capabilities` and `icon` so the page keeps its settings and its
+`tools/` files.
 
 If the publish reports a conflict, re-read `PAGE`, run the `page` step again on
 the fresh copy, and publish once more.
@@ -195,8 +245,7 @@ the fresh copy, and publish once more.
 ## 8. Verify
 
 1. Read `PAGE` again and confirm the new pick's `id` is in the `picks` block.
-2. List the page's files (`action: "list"`, `scope: "files"`, `url: PAGE`) and
-   confirm the new `.xlsx` is there.
+2. Confirm the new pick in the page has a non-empty `model_b64`.
 
 ## 9. Report
 

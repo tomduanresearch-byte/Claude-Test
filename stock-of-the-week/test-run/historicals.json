@@ -1,0 +1,281 @@
+{
+ "ticker": "TRMB",
+ "name": "Trimble Inc.",
+ "cik": 864749,
+ "fiscal_year_ends": [
+  "2025-01-03",
+  "2026-01-02"
+ ],
+ "values": {
+  "revenue": [
+   3683300000.0,
+   3587300000.0
+  ],
+  "cogs": [
+   1287000000.0,
+   1109400000.0
+  ],
+  "gross_profit": [
+   2396300000.0,
+   2477900000.0
+  ],
+  "rnd": [
+   662300000.0,
+   630700000.0
+  ],
+  "sga": [
+   1151699999.9999998,
+   1129100000.0
+  ],
+  "ebit": [
+   460700000.0,
+   592000000.0
+  ],
+  "interest_expense": [
+   90700000.0,
+   74400000.0
+  ],
+  "pretax": [
+   2005900000.0,
+   509400000.0
+  ],
+  "tax": [
+   501500000.0,
+   85400000.0
+  ],
+  "net_income": [
+   1504400000.0,
+   424000000.0
+  ],
+  "diluted_shares": [
+   247027914.61412153,
+   240909090.9090909
+  ],
+  "cfo": [
+   531400000.0,
+   386000000.0
+  ],
+  "da": [
+   232000000.0,
+   199900000.0
+  ],
+  "sbc": [
+   158600000.0,
+   146500000.0
+  ],
+  "capex": [
+   33600000.0,
+   25000000.0
+  ],
+  "cfi": [
+   1861100000.0,
+   -25000000.0
+  ],
+  "cff": [
+   -1883600000.0,
+   -855400000.0
+  ],
+  "dividends": [
+   0.0,
+   0.0
+  ],
+  "buybacks": [
+   175000000.0,
+   875500000.0
+  ],
+  "cash": [
+   747800000.0,
+   253400000.0
+  ],
+  "st_investments": [
+   0.0,
+   0.0
+  ],
+  "ar": [
+   725800000.0,
+   856000000.0
+  ],
+  "inventory": [
+   194300000.0,
+   186300000.0
+  ],
+  "total_current_assets": [
+   2270400000.0,
+   1631900000.0
+  ],
+  "ppe": [
+   188400000.0,
+   185500000.0
+  ],
+  "total_assets": [
+   9488300000.0,
+   9312000000.0
+  ],
+  "ap": [
+   161600000.0,
+   168300000.0
+  ],
+  "total_current_liabilities": [
+   1788000000.0,
+   1503400000.0
+  ],
+  "st_debt": [
+   0.0,
+   0.0
+  ],
+  "lt_debt": [
+   1390600000.0,
+   1392200000.0
+  ],
+  "total_liabilities": [
+   3743000000.0,
+   3475800000.0
+  ],
+  "equity": [
+   5745300000.0,
+   5836200000.0
+  ],
+  "liabilities_and_equity": [
+   9488300000.0,
+   9312000000.0
+  ]
+ },
+ "xbrl_tags": {
+  "revenue": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "cogs": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "gross_profit": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "rnd": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "sga": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "ebit": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "interest_expense": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "pretax": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "tax": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "net_income": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "diluted_shares": [
+   "derived: net income / diluted EPS",
+   "derived: net income / diluted EPS"
+  ],
+  "cfo": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "da": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "sbc": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "capex": [
+   "10-K via web search",
+   "derived: CFO \u2212 FCF ($386M \u2212 $361M)"
+  ],
+  "cfi": [
+   "10-K via web search",
+   "derived: capex only"
+  ],
+  "cff": [
+   "derived from cash change",
+   "derived from cash change"
+  ],
+  "dividends": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "buybacks": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "cash": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "st_investments": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "ar": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "inventory": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "total_current_assets": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "ppe": [
+   "10-K via web search",
+   "derived: FY24 PP&E + capex \u2212 depreciation"
+  ],
+  "total_assets": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "ap": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "total_current_liabilities": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "st_debt": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "lt_debt": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "total_liabilities": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "equity": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ],
+  "liabilities_and_equity": [
+   "release/10-K via web search",
+   "release/10-K via web search"
+  ]
+ },
+ "shares_outstanding_latest": 234000000.0,
+ "shares_outstanding_as_of": "2026-07-03",
+ "source": "Trimble 10-K FY2024 and FY2025 and Q4 earnings releases, collected via web search (test run; SEC API blocked in this environment)",
+ "fetched": "2026-09-23"
+}
