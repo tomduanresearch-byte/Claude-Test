@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Battle Atlas</title>
+  <meta name="description" content="Search any battle and walk through it phase by phase on an animated map.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M6 26 L26 6 M6 6 L26 26' stroke='%23b3312c' stroke-width='4' stroke-linecap='round'/></svg>">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 L26 6 M6 6 L26 26" /></svg>
+      Battle Atlas
+    </a>
+    <span class="topbar-note" id="gen-status"></span>
+  </header>
+
+  <main id="app"></main>
+
+  <template id="tpl-home">
+    <section class="home">
+      <div class="hero">
+        <h1>Walk through any battle, phase by phase.</h1>
+        <p class="lede">Search by battle, general, country, war or period. Then see who fought, why, and exactly how it was won, on an animated map.</p>
+        <form class="search" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" name="q" placeholder="Hannibal, Cannae, Napoleon, 1415, Rome…" autocomplete="off" aria-label="Search battles">
+        </form>
+        <div class="chips" role="group" aria-label="Filter by era"></div>
+      </div>
+      <div class="results-head"><h2 class="results-title"></h2></div>
+      <div class="results"></div>
+      <div class="generate-slot"></div>
+    </section>
+  </template>
+
+  <template id="tpl-battle">
+    <section class="battle">
+      <div class="battle-head">
+        <a class="back" href="#/">← All battles</a>
+        <div class="battle-title">
+          <p class="eyebrow"></p>
+          <h1></h1>
+          <p class="meta"></p>
+        </div>
+        <nav class="tabs" role="tablist"></nav>
+      </div>
+      <div class="tab-body"></div>
+    </section>
+  </template>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

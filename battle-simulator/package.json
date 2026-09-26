@@ -1,0 +1,14 @@
+{
+  "name": "battle-simulator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Search any battle and walk through it phase by phase on an animated map.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node scripts/check-data.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.128.0"
+  }
+}
