@@ -34,6 +34,7 @@ export class BattleMap {
     this.svg.setAttribute("aria-label", `Map of the ${battle.name}`);
     this.defs();
     this.gTerrain = el("g", { class: "terrain" }, this.svg);
+    this.gOverlays = el("g", { class: "overlays" }, this.svg);
     this.gArrows = el("g", { class: "arrows" }, this.svg);
     this.gUnits = el("g", { class: "units" }, this.svg);
     this.drawTerrain();
@@ -52,6 +53,12 @@ export class BattleMap {
     el("circle", { cx: 14, cy: 13, r: 3.2, class: "tree" }, trees);
     const marsh = el("pattern", { id: "marsh", width: 16, height: 10, patternUnits: "userSpaceOnUse" }, defs);
     el("path", { d: "M2 7 h5 M9 3 h5", class: "marsh-line" }, marsh);
+    const paper = el("filter", { id: "paper", x: 0, y: 0, width: "100%", height: "100%" }, defs);
+    el("feTurbulence", { type: "fractalNoise", baseFrequency: 0.9, numOctaves: 3, seed: 7, result: "noise" }, paper);
+    el("feColorMatrix", { type: "matrix", values: "0 0 0 0 0.35  0 0 0 0 0.27  0 0 0 0 0.16  0 0 0 0.22 0" }, paper);
+    const vig = el("radialGradient", { id: "vignette", cx: "50%", cy: "50%", r: "75%" }, defs);
+    el("stop", { offset: "60%", "stop-color": "#3b2a14", "stop-opacity": 0 }, vig);
+    el("stop", { offset: "100%", "stop-color": "#3b2a14", "stop-opacity": 0.28 }, vig);
     const field = el("pattern", { id: "furrows", width: 10, height: 10, patternUnits: "userSpaceOnUse", patternTransform: "rotate(20)" }, defs);
     el("path", { d: "M0 5 H10", class: "furrow" }, field);
     for (const s of this.battle.sides) {
@@ -65,9 +72,30 @@ export class BattleMap {
   drawTerrain() {
     const g = this.gTerrain;
     el("rect", { x: 0, y: 0, width: VW, height: VH, class: "ground" }, g);
+    el("rect", { x: 0, y: 0, width: VW, height: VH, class: "grain", filter: "url(#paper)" }, g);
     el("rect", { x: 0, y: 0, width: VW, height: VH, fill: "url(#grid)" }, g);
+    this.drawFeatures(g, this.battle.terrain.features);
+    el("rect", { x: 0, y: 0, width: VW, height: VH, fill: "url(#vignette)", "pointer-events": "none" }, g);
+    const compass = el("g", { class: "compass", transform: `translate(${VW - 40} 40)` }, g);
+    el("circle", { r: 18 }, compass);
+    el("path", { d: "M0 -13 L5 3 L0 0 L-5 3 z" }, compass);
+    const up = compassUp(this.battle.terrain.orientation);
+    el("text", { y: -22 }, compass).textContent = up;
+  }
+
+  // Overlays belong to one phase (a dam, then the flood that replaces it);
+  // a phase that needs an earlier overlay lists it again.
+  drawOverlays(index, instant) {
+    this.gOverlays.replaceChildren();
+    const overlays = this.battle.phases[index].overlays;
+    if (!overlays.length) return;
+    const g = el("g", { class: instant ? "" : "overlay-new" }, this.gOverlays);
+    this.drawFeatures(g, overlays);
+  }
+
+  drawFeatures(g, list) {
     const order = ["field", "water", "marsh", "hill", "forest", "town", "ridge", "river", "road", "fortification"];
-    const features = [...this.battle.terrain.features].sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
+    const features = [...list].sort((a, b) => order.indexOf(a.type) - order.indexOf(b.type));
     for (const f of features) {
       const pts = f.points.map(([x, y]) => [X(x), Y(y)]);
       if (LINE_FEATURES.has(f.type)) {
@@ -92,11 +120,6 @@ export class BattleMap {
         el("text", { x: lx, y: ly, class: `terrain-label terrain-label-${f.type}` }, g).textContent = f.label;
       }
     }
-    const compass = el("g", { class: "compass", transform: `translate(${VW - 40} 40)` }, g);
-    el("circle", { r: 18 }, compass);
-    el("path", { d: "M0 -13 L5 3 L0 0 L-5 3 z" }, compass);
-    const up = compassUp(this.battle.terrain.orientation);
-    el("text", { y: -22 }, compass).textContent = up;
   }
 
   makeUnit(u) {
@@ -128,6 +151,7 @@ export class BattleMap {
     if (!phase) return;
     const from = this.current;
     const to = phase.pos;
+    this.drawOverlays(index, instant);
     this.drawArrows(phase, instant);
     cancelAnimationFrame(this.anim);
     const duration = instant || matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1400;

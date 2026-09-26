@@ -9,6 +9,11 @@ export default {
   result: "Decisive Macedonian victory; fall of the Achaemenid Persian Empire",
   summary: "Outnumbered and outflanked on open ground chosen by the enemy, Alexander drifted his army sideways to pull the Persian line apart, then drove his cavalry wedge through the gap straight at Darius.",
   tags: ["Alexander the Great", "Darius III", "Macedon", "Greece", "Persia", "Achaemenid", "Parmenion", "Bessus", "Mazaeus", "phalanx", "Companion cavalry"],
+  figures: [
+    { person: "alexander", side: "macedon", role: "King of Macedon; led the Companion cavalry" },
+    { person: "darius3", side: "persia", role: "Great King of Persia; commanded from the centre" },
+    { person: "parmenion", side: "macedon", role: "Commanded the Macedonian left" },
+  ],
   context: {
     background: "In 334 BC Alexander III of Macedon crossed into Asia with a combined Macedonian and Greek army to attack the Persian Achaemenid Empire, the largest state the world had yet seen. He won at the Granicus, then beat King Darius III in person at Issus (333 BC), where Darius fled and left his family behind.\n\nAlexander then took the Mediterranean coast and Egypt rather than chase Darius. That gave the Persian king two years to raise a new army from across his eastern empire and choose a battlefield that favoured it.",
     causes: [
@@ -37,7 +42,7 @@ export default {
       objective: "Break the Persian army and kill or capture Darius.",
       casualties: "~100–1,500 killed (ancient sources differ widely)",
       casualtiesNumber: 1200,
-      color: "#2f5fb3",
+      color: "#2f4f7f",
     },
     {
       id: "persia",
@@ -55,7 +60,7 @@ export default {
       objective: "Use the flat ground and much longer line to envelop the Macedonian flanks and smash the phalanx with chariots.",
       casualties: "Tens of thousands (ancient claims 40,000–300,000)",
       casualtiesNumber: 40000,
-      color: "#b07a12",
+      color: "#a0741f",
     },
   ],
   terrain: {

@@ -7,7 +7,7 @@
   <meta name="description" content="Search any battle and walk through it phase by phase on an animated map.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+SC:wght@500;600&family=Noto+Serif+TC:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M6 26 L26 6 M6 6 L26 26' stroke='%23b3312c' stroke-width='4' stroke-linecap='round'/></svg>">
 </head>
@@ -25,12 +25,14 @@
   <template id="tpl-home">
     <section class="home">
       <div class="hero">
-        <h1>Walk through any battle, phase by phase.</h1>
-        <p class="lede">Search by battle, general, country, war or period. Then see who fought, why, and exactly how it was won, on an animated map.</p>
+        <p class="eyebrow">An atlas of battles, from Gaugamela to Austerlitz</p>
+        <h1>Every battle, told plate by plate.</h1>
+        <p class="lede">Search by battle, general, country, war or period. Read who fought and why, meet the people who drove it, and follow the fighting phase by phase on the map.</p>
         <form class="search" role="search">
           <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
           <input type="search" name="q" placeholder="Hannibal, Cannae, Napoleon, 1415, Rome…" autocomplete="off" aria-label="Search battles">
         </form>
+        <p class="try">Try <button type="button">Bai Qi</button><button type="button">Han Xin</button><button type="button">Hannibal</button><button type="button">Napoleon</button><button type="button">China</button><button type="button">1415</button></p>
         <div class="chips" role="group" aria-label="Filter by era"></div>
       </div>
       <div class="results-head"><h2 class="results-title"></h2></div>
@@ -46,6 +48,7 @@
         <div class="battle-title">
           <p class="eyebrow"></p>
           <h1></h1>
+          <p class="native" hidden></p>
           <p class="meta"></p>
         </div>
         <nav class="tabs" role="tablist"></nav>

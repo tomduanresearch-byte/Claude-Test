@@ -30,6 +30,7 @@ const arr = (items) => ({ type: "array", items });
 
 export const BATTLE_SCHEMA = obj({
   name: str,
+  nativeName: str,
   date: str,
   year: int,
   era: { type: "string", enum: ERAS },
@@ -45,6 +46,15 @@ export const BATTLE_SCHEMA = obj({
     stakes: str,
     prelude: str,
   }),
+  figures: arr(obj({
+    name: str,
+    nativeName: str,
+    side: str,
+    role: str,
+    life: str,
+    bio: str,
+    legacy: str,
+  })),
   sides: arr(obj({
     id: str,
     name: str,
@@ -112,6 +122,8 @@ export const SYSTEM_PROMPT = `You are a military historian building an interacti
 
 Content:
 - context: who fought whom, the wider war, why this battle happened here and now, and what each side stood to gain or lose. Write for someone who knows nothing about the period. background and prelude are 1-2 short paragraphs each; causes is 3-5 bullet points.
+- nativeName: the battle's name in the original language and script when that is not English (e.g. "長平之戰" for Changping, "Bataille d'Austerlitz"); otherwise an empty string.
+- figures: the 3-5 people who drove this battle, commanders and the rulers or ministers behind them. For each: name, native-script name if not English (else empty), side id, their role in this battle, life dates ("c. 247–196 BC"), a biography of 3-4 plain sentences (origins, rise, character, what made them matter), and legacy: one or two sentences on their fate and how they are remembered.
 - sides: normally two (use ids "a" and "b"; add "c" only for a genuine third party). Give realistic strength estimates as text ("~50,000") and a best-estimate integer. Where ancient sources disagree, say so in the text field.
 - strategy: the plan and the decisive idea in plain language, then 3-6 key moves.
 - phases: 5-8 phases in chronological order, starting with deployment and ending with the decisive moment or collapse. Each phase has a short title, an approximate time ("Dawn", "c. 10:00", "Day 2, afternoon"), a one-sentence summary, a 1-2 paragraph narrative of what happened and why, and an insight: the single tactical lesson to notice on the map in that phase.

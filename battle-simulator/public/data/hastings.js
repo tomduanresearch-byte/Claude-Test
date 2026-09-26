@@ -9,6 +9,11 @@ export default {
   result: "Decisive Norman victory; death of King Harold II",
   summary: "An all-day struggle between the English shield wall on a ridge and William's combined army of archers, infantry and knights, decided by feigned retreats, attrition and Harold's death.",
   tags: ["William the Conqueror", "Harold Godwinson", "England", "Normandy", "France", "Normans", "Anglo-Saxons", "shield wall", "feigned retreat", "Bayeux Tapestry"],
+  figures: [
+    { person: "harold", side: "english", role: "King of England" },
+    { person: "william", side: "normans", role: "Duke of Normandy; claimant to the English throne" },
+    { person: "hardrada", side: "english", role: "Norwegian invader whose attack weeks earlier exhausted Harold's army" },
+  ],
   context: {
     background: "When the childless King Edward the Confessor died in January 1066, the English nobility crowned Harold Godwinson, the most powerful earl in England. Two foreign rulers also claimed the throne: Duke William of Normandy, who said Edward had promised it to him and that Harold had sworn to support him, and King Harald Hardrada of Norway.\n\nIn September Hardrada invaded the north with Harold's exiled brother Tostig. Harold marched north and destroyed their army at Stamford Bridge on 25 September. Three days later William landed at Pevensey on the south coast.",
     causes: [
@@ -35,7 +40,7 @@ export default {
       objective: "Hold the ridge and block the road to London until the Normans exhausted themselves.",
       casualties: "Several thousand, including Harold, Gyrth and Leofwine",
       casualtiesNumber: 4000,
-      color: "#b3312c",
+      color: "#9e3328",
     },
     {
       id: "normans",
@@ -51,7 +56,7 @@ export default {
       objective: "Break the English army in a single battle before English reinforcements arrived.",
       casualties: "~2,000",
       casualtiesNumber: 2000,
-      color: "#2f5fb3",
+      color: "#2f4f7f",
     },
   ],
   terrain: {

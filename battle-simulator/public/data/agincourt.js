@@ -9,6 +9,11 @@ export default {
   result: "Decisive English victory",
   summary: "A small, sick, hungry English army of mostly longbowmen destroyed a much larger French army of armoured men-at-arms that advanced across a narrow, rain-soaked ploughed field.",
   tags: ["Henry V", "England", "France", "longbow", "Hundred Years' War", "Charles d'Albret", "Boucicaut", "St Crispin's Day", "Shakespeare"],
+  figures: [
+    { person: "henry5", side: "england", role: "King of England; commanded in person" },
+    { person: "dalbret", side: "france", role: "Constable of France; nominal French commander" },
+    { person: "charles6", side: "france", role: "King of France, absent through illness" },
+  ],
   context: {
     background: "The Hundred Years' War began in 1337 when English kings claimed the French throne through their descent from Edward I's French queen. After great English victories at Crécy (1346) and Poitiers (1356), France recovered most of its lost land.\n\nBy 1415, France was weakened by the madness of King Charles VI and a civil war between the Armagnac and Burgundian factions. The young, ambitious Henry V of England saw an opportunity to revive his claims.",
     causes: [
@@ -34,7 +39,7 @@ export default {
       objective: "Survive and break through to Calais.",
       casualties: "~100–600 killed, including the Duke of York",
       casualtiesNumber: 400,
-      color: "#b3312c",
+      color: "#9e3328",
     },
     {
       id: "france",
@@ -51,7 +56,7 @@ export default {
       objective: "Crush the English army and capture King Henry for ransom.",
       casualties: "~6,000 killed and 1,500–2,000 captured, including many great nobles",
       casualtiesNumber: 7500,
-      color: "#2f5fb3",
+      color: "#2f4f7f",
     },
   ],
   terrain: {

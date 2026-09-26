@@ -9,6 +9,11 @@ export default {
   result: "Decisive Roman victory; end of the Second Punic War",
   summary: "Scipio, who had survived Cannae, beat Hannibal at his own game: he neutralised the Carthaginian elephants, won the cavalry battle, then brought his horsemen back into the enemy's rear.",
   tags: ["Scipio Africanus", "Hannibal", "Rome", "Carthage", "Masinissa", "Numidia", "elephants", "Punic Wars", "Laelius"],
+  figures: [
+    { person: "scipio", side: "rome", role: "Roman commander" },
+    { person: "hannibal", side: "carthage", role: "Commander of the Carthaginian army" },
+    { person: "masinissa", side: "rome", role: "Numidian king; led the Roman right-wing cavalry" },
+  ],
   context: {
     background: "Fourteen years after Cannae, Hannibal was still in Italy but could no longer win there. Rome had recovered, retaken Capua and Syracuse, and in Spain a young general, Publius Cornelius Scipio, destroyed Carthaginian power by 206 BC.\n\nIn 204 BC Scipio invaded Africa itself. He won over the Numidian prince Masinissa, burned the Carthaginian and Numidian camps near Utica, and beat another army on the Great Plains. Carthage recalled Hannibal from Italy to defend the city.",
     causes: [
@@ -36,7 +41,7 @@ export default {
       objective: "Defeat Hannibal's army in the field and force Carthage to surrender.",
       casualties: "~1,500–2,500 killed",
       casualtiesNumber: 2500,
-      color: "#b3312c",
+      color: "#9e3328",
     },
     {
       id: "carthage",
@@ -54,7 +59,7 @@ export default {
       objective: "Break the Roman line with elephants, wear it down with expendable lines, and finish it with the veterans.",
       casualties: "~20,000 killed, ~20,000 captured",
       casualtiesNumber: 35000,
-      color: "#6b3fa0",
+      color: "#5e3a78",
     },
   ],
   terrain: {

@@ -1,6 +1,6 @@
 // Sanity-checks the curated battles: every id referenced in a phase exists,
 // every unit is placed somewhere, and coordinates stay on the map.
-import { CURATED } from "../public/data/index.js";
+import { CURATED, PEOPLE } from "../public/data/index.js";
 import { ERAS, UNIT_TYPES, UNIT_STATES, TERRAIN_TYPES, ARROW_KINDS } from "../public/js/schema.js";
 
 let problems = 0;
@@ -20,6 +20,11 @@ for (const [key, b] of Object.entries(CURATED)) {
     if (!TERRAIN_TYPES.includes(f.type)) fail(key, `unknown terrain ${f.type}`);
     for (const [x, y] of f.points) if (!onMap(x, y)) fail(key, `terrain point off map ${x},${y}`);
   }
+  for (const f of b.figures || []) {
+    if (!PEOPLE[f.person]) fail(key, `unknown person ${f.person}`);
+    if (!sides.has(f.side)) fail(key, `figure ${f.person} has unknown side ${f.side}`);
+  }
+  if (!(b.figures || []).length) fail(key, "no figures");
   b.phases.forEach((p, i) => {
     const where = `${key} phase ${i + 1}`;
     for (const [id, v] of Object.entries(p.positions)) {
@@ -29,6 +34,7 @@ for (const [key, b] of Object.entries(CURATED)) {
       const state = v.find((n) => typeof n === "string");
       if (state && !UNIT_STATES.includes(state)) fail(where, `${id} unknown state ${state}`);
     }
+    for (const f of p.overlays || []) if (!TERRAIN_TYPES.includes(f.type)) fail(where, `unknown overlay ${f.type}`);
     for (const a of p.arrows) {
       if (!sides.has(a.side)) fail(where, `arrow side ${a.side}`);
       if (!ARROW_KINDS.includes(a.kind)) fail(where, `arrow kind ${a.kind}`);

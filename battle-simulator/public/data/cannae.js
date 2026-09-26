@@ -9,6 +9,12 @@ export default {
   result: "Decisive Carthaginian victory",
   summary: "Hannibal's smaller army lured the largest force Rome had ever fielded into a trap, let it push into a bending centre, then closed both flanks and the rear around it: the textbook double envelopment.",
   tags: ["Hannibal", "Rome", "Carthage", "double envelopment", "encirclement", "Punic Wars", "Varro", "Paullus", "Hasdrubal", "Maharbal"],
+  figures: [
+    { person: "hannibal", side: "carthage", role: "Commander of the Carthaginian army" },
+    { person: "varro", side: "rome", role: "Consul in command on the day" },
+    { person: "paullus", side: "rome", role: "Consul; commanded the Roman right" },
+    { person: "fabius", side: "rome", role: "Architect of Rome's delaying strategy, abandoned before Cannae" },
+  ],
   context: {
     background: "Rome and Carthage were the two great powers of the western Mediterranean. Carthage, a Phoenician trading city in modern Tunisia, had lost the First Punic War (264–241 BC) and with it Sicily, then Sardinia and Corsica. Hamilcar Barca rebuilt Carthaginian power in Spain; his son Hannibal inherited that army and a lifelong hostility to Rome.\n\nIn 218 BC Hannibal marched from Spain over the Pyrenees and the Alps into Italy. He destroyed Roman armies at the Trebia (218) and at Lake Trasimene (217), where a consular army was ambushed and wiped out. His aim was not to storm Rome itself but to break its network of Italian allies, who supplied half of every Roman army.",
     causes: [
@@ -38,7 +44,7 @@ export default {
       objective: "Smash through the Carthaginian centre by weight of numbers and end the war in one day.",
       casualties: "~50,000–70,000 killed; ~10,000–19,000 captured (Livy: 48,200 killed; Polybius: 70,000)",
       casualtiesNumber: 55000,
-      color: "#b3312c",
+      color: "#9e3328",
     },
     {
       id: "carthage",
@@ -56,7 +62,7 @@ export default {
       objective: "Let the Romans' own strength carry them into a trap, then surround and destroy the whole army.",
       casualties: "~5,700–8,000 killed, mostly Gauls in the centre",
       casualtiesNumber: 6700,
-      color: "#6b3fa0",
+      color: "#5e3a78",
     },
   ],
   terrain: {

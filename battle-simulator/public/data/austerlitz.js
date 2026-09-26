@@ -9,6 +9,12 @@ export default {
   result: "Decisive French victory",
   summary: "Napoleon deliberately weakened his right and gave up the high ground to tempt the Russo-Austrian army into attacking it, then struck the hollowed-out centre on the Pratzen Heights and cut their army in two.",
   tags: ["Napoleon", "France", "Russia", "Austria", "Kutuzov", "Tsar Alexander I", "Francis II", "Battle of the Three Emperors", "Davout", "Soult", "Pratzen"],
+  figures: [
+    { person: "napoleon", side: "france", role: "Emperor of the French; commanded in person" },
+    { person: "alexander1", side: "allies", role: "Tsar of Russia; insisted on attacking" },
+    { person: "kutuzov", side: "allies", role: "Nominal Allied commander" },
+    { person: "davout", side: "france", role: "Marshal commanding III Corps on the French right" },
+  ],
   context: {
     background: "In 1805 Britain, Austria, Russia and Sweden formed the Third Coalition against Napoleon, who had crowned himself Emperor of the French the year before. Napoleon abandoned his planned invasion of Britain and marched his Grande Armée from the Channel coast to the Danube in weeks.\n\nAt Ulm in October he surrounded and captured an entire Austrian army of about 25,000 men. He then took Vienna. But a combined Russian and Austrian army under Tsar Alexander I and Emperor Francis II was gathering in Moravia, and Prussia was threatening to join the coalition. Napoleon, far from home with a tired army, needed a decisive victory quickly.",
     causes: [
@@ -36,7 +42,7 @@ export default {
       objective: "Lure the Allies into attacking the French right, then break their centre and destroy them.",
       casualties: "~9,000 killed, wounded or captured",
       casualtiesNumber: 9000,
-      color: "#2f5fb3",
+      color: "#2f4f7f",
     },
     {
       id: "allies",
@@ -54,7 +60,7 @@ export default {
       objective: "Swing round the French right, cut Napoleon off from Vienna, and roll up his army from the south.",
       casualties: "~16,000 killed or wounded and ~11,000 captured; 180 guns lost",
       casualtiesNumber: 27000,
-      color: "#3f7a3a",
+      color: "#3f6b4f",
     },
   ],
   terrain: {

@@ -7,7 +7,8 @@
 //              x, y, w, h, angle; a string anywhere is the state. Omitted
 //              values carry over from the previous phase.
 
-const PALETTE = ["#b3312c", "#2f5fb3", "#3f7a3a", "#b07a12", "#6b3fa0"];
+// Muted inks that read on the parchment map plates.
+const PALETTE = ["#9e3328", "#2f4f7f", "#3f6b4f", "#a0741f", "#5e3a78"];
 
 const DEFAULT_SIZE = {
   commander: [3, 3], camp: [6, 4], artillery: [5, 2], skirmishers: [20, 1.5],
@@ -20,7 +21,9 @@ const num = (v, fallback) => (typeof v === "number" && Number.isFinite(v) ? v : 
 const arr = (v) => (Array.isArray(v) ? v : []);
 const text = (v) => (typeof v === "string" ? v : "");
 
-export function normalizeBattle(raw, { id, source } = {}) {
+// Curated battles name people by id ({ person: "hannibal", side, role }) and
+// the details come from the shared registry; generated battles carry them inline.
+export function normalizeBattle(raw, { id, source, people = {} } = {}) {
   const sides = arr(raw.sides).map((s, i) => ({
     id: text(s.id) || String.fromCharCode(97 + i),
     name: text(s.name) || `Side ${i + 1}`,
@@ -75,6 +78,10 @@ export function normalizeBattle(raw, { id, source } = {}) {
       narrative: text(p.narrative),
       insight: text(p.insight),
       pos,
+      // Terrain shown only in this phase (a dam, a flood); curated battles only.
+      overlays: arr(p.overlays)
+        .map((f) => ({ type: text(f.type), label: text(f.label), points: arr(f.points).filter((pt) => Array.isArray(pt) && pt.length >= 2) }))
+        .filter((f) => f.points.length >= 2),
       arrows: arr(p.arrows)
         .map((a) => ({
           side: sideIds.has(a.side) ? a.side : sides[0]?.id,
@@ -86,6 +93,20 @@ export function normalizeBattle(raw, { id, source } = {}) {
     };
   });
 
+  const figures = arr(raw.figures).map((f) => {
+    const p = (f.person && people[f.person]) || {};
+    return {
+      person: text(f.person),
+      name: text(f.name) || text(p.name),
+      nativeName: text(f.nativeName) || text(p.nativeName),
+      side: sideIds.has(f.side) ? f.side : "",
+      role: text(f.role),
+      life: text(f.life) || text(p.life),
+      bio: text(f.bio) || text(p.bio),
+      legacy: text(f.legacy) || text(p.legacy),
+    };
+  }).filter((f) => f.name);
+
   const ctx = raw.context || {};
   const terrain = raw.terrain || {};
   const strategy = raw.strategy || {};
@@ -96,6 +117,7 @@ export function normalizeBattle(raw, { id, source } = {}) {
     id: id || slug(name),
     source: source || "curated",
     name,
+    nativeName: text(raw.nativeName),
     date: text(raw.date),
     year: num(raw.year, 0),
     era: text(raw.era),
@@ -112,6 +134,7 @@ export function normalizeBattle(raw, { id, source } = {}) {
       prelude: text(ctx.prelude),
     },
     sides,
+    figures,
     terrain: {
       description: text(terrain.description),
       orientation: text(terrain.orientation),

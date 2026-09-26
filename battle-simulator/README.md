@@ -3,8 +3,9 @@
 Search for a battle by name, general, country, war or period, then walk through
 it phase by phase on an animated map. For each battle you get:
 
-1. **Context**: who fought whom, with what forces, why the battle happened, and
-   the winning plan broken into key moves.
+1. **Context**: the people who drove the battle, with short biographies; who
+   fought whom and with what forces; why the battle happened; and the winning
+   plan broken into key moves.
 2. **Walkthrough**: a top-down map where the units move from phase to phase
    (deployment, opening moves, the decisive moment, the collapse). Each phase
    has a narrative and a "what to notice" callout. Step through with the
@@ -15,19 +16,30 @@ it phase by phase on an animated map. For each battle you get:
 
 ## The library
 
-Six battles are hand-written and work offline:
+Fifteen battles are hand-written and work offline. Each one comes with short
+biographies of the people who drove it: commanders, rulers and ministers. A
+person who appears in several battles links to all of them.
 
 | Battle | Year | Why it's here |
 |---|---|---|
 | Gaugamela | 331 BC | Alexander's oblique march and cavalry wedge |
+| Yique | 293 BC | Bai Qi pins one ally and destroys the other |
+| Yan–Ying | 279–278 BC | Bai Qi floods Yan and takes the Chu capital |
+| Huayang | 273 BC | Bai Qi's eight-day march |
+| Changping | 260 BC | Bai Qi's encirclement of the Zhao army |
 | Cannae | 216 BC | Hannibal's double envelopment |
+| Chencang | 206 BC | Han Xin breaks out of Hanzhong |
+| Anyi | 205 BC | Han Xin crosses the Yellow River on wooden jars |
+| Jingxing | 204 BC | Han Xin's "back to the river" and the red flags |
+| Wei River | 203 BC | Han Xin's sandbag dam and flood |
+| Gaixia | 202 BC | Han Xin's last battle; the songs of Chu |
 | Zama | 202 BC | Scipio turns Hannibal's methods against him |
 | Hastings | 1066 | Shield wall against combined arms |
 | Agincourt | 1415 | Longbows, stakes and mud |
 | Austerlitz | 1805 | Napoleon's bait-and-strike on the Pratzen |
 
-Search understands names ("cannae"), people ("hannibal"), countries
-("england"), wars ("punic"), years ("1415"), decades or centuries ("1800s",
+Search understands names ("cannae", "長平"), people ("hannibal", "bai qi"),
+countries ("england", "china"), wars ("punic"), years ("1415"), decades or centuries ("1800s",
 "3rd"), and "bc"/"ad". The era chips filter by period.
 
 ## Any other battle: generate it with Claude
@@ -71,13 +83,16 @@ public/
   js/generate.js          picks the generation route: claude.ai "sample" or the local server
   js/search.js            search scoring and year matching
   data/*.js               the curated battles
+  data/people.js          biographies shared across battles
 scripts/check-data.js     `npm run check`: validates every curated battle
 ```
 
 ### Adding a battle to the library
 
 Copy an existing file in `public/data/`, register it in `public/data/index.js`,
-and run `npm run check`. The map is 100 × 100: x runs left to right, y top to
+add anyone new to `public/data/people.js`, and run `npm run check`. A phase
+can also carry `overlays`, terrain shown only in that phase, such as a dam or
+a flood. The map is 100 × 100: x runs left to right, y top to
 bottom. Units are rectangles with a frontage `w` and depth `h`. In the curated
 files, a phase's positions are written compactly as
 `unitId: [x, y, w, h, angle, "state"]`. Anything left out carries over from the
