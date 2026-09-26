@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>战史图志</title>
+  <meta name="description" content="搜索古今战役，在地图上逐阶段重演战局，并了解背后的人物。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Cormorant+SC:wght@500;600&family=Noto+Serif+TC:wght@500&family=Noto+Serif+SC:wght@400;600;700&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M6 26 L26 6 M6 6 L26 26' stroke='%23b3312c' stroke-width='4' stroke-linecap='round'/></svg>">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#/">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 L26 6 M6 6 L26 26" /></svg>
+      战史图志
+    </a>
+    <span class="topbar-note" id="gen-status"></span>
+  </header>
+
+  <main id="app"></main>
+
+  <template id="tpl-home">
+    <section class="home">
+      <div class="hero">
+        <p class="eyebrow">古今战役图志 · 从长平、垓下到坎尼、奥斯特里茨</p>
+        <h1>披图读史，逐阵观兵。</h1>
+        <p class="lede">按战役、将领、国家、战争或年代搜索。看清谁与谁交战、为何而战，认识背后的人物，再在地图上一步步看战局如何展开。</p>
+        <form class="search" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" name="q" placeholder="白起、长平、韩信、汉尼拔、1415……" autocomplete="off" aria-label="搜索战役">
+        </form>
+        <p class="try">试试 <button type="button">白起</button><button type="button">韩信</button><button type="button">项羽</button><button type="button">汉尼拔</button><button type="button">拿破仑</button><button type="button">中国</button></p>
+        <div class="chips" role="group" aria-label="按时代筛选"></div>
+      </div>
+      <div class="results-head"><h2 class="results-title"></h2></div>
+      <div class="results"></div>
+      <div class="generate-slot"></div>
+    </section>
+  </template>
+
+  <template id="tpl-battle">
+    <section class="battle">
+      <div class="battle-head">
+        <a class="back" href="#/">← 全部战役</a>
+        <div class="battle-title">
+          <p class="eyebrow"></p>
+          <h1></h1>
+          <p class="native" hidden></p>
+          <p class="meta"></p>
+        </div>
+        <nav class="tabs" role="tablist"></nav>
+      </div>
+      <div class="tab-body"></div>
+    </section>
+  </template>
+
+  <div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

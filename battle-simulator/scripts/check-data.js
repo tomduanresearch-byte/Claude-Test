@@ -1,6 +1,7 @@
 // Sanity-checks the curated battles: every id referenced in a phase exists,
 // every unit is placed somewhere, and coordinates stay on the map.
 import { CURATED, PEOPLE } from "../public/data/index.js";
+import { ZH_BATTLES, ZH_PEOPLE } from "../public/data/zh/index.js";
 import { ERAS, UNIT_TYPES, UNIT_STATES, TERRAIN_TYPES, ARROW_KINDS } from "../public/js/schema.js";
 
 let problems = 0;
@@ -44,5 +45,44 @@ for (const [key, b] of Object.entries(CURATED)) {
   for (const id of units.keys()) if (!b.phases.some((p) => p.positions[id])) fail(key, `unit ${id} never placed`);
   console.log(`${key}: ${b.units.length} units, ${b.phases.length} phases`);
 }
+// Chinese overlays must line up with the originals, and translate every text field.
+const TEXT = ["name", "date", "war", "location", "result", "summary", "sourceNotes"];
+for (const [key, b] of Object.entries(CURATED)) {
+  const z = ZH_BATTLES[key];
+  if (!z) { fail(key, "no Chinese translation"); continue; }
+  const where = `zh/${key}`;
+  for (const f of TEXT) if (b[f] && !z[f]) fail(where, `missing ${f}`);
+  for (const f of ["background", "stakes", "prelude"]) if (!z.context?.[f]) fail(where, `missing context.${f}`);
+  if ((z.context?.causes || []).length !== b.context.causes.length) fail(where, "causes count differs");
+  if ((z.sides || []).length !== b.sides.length) fail(where, "sides count differs");
+  b.sides.forEach((s, i) => {
+    const zs = z.sides?.[i] || {};
+    for (const f of ["name", "strength", "objective", "casualties"]) if (s[f] && !zs[f]) fail(where, `side ${i} missing ${f}`);
+    if ((zs.leaders || []).length !== s.leaders.length) fail(where, `side ${i} leaders count differs`);
+    if ((zs.composition || []).length !== s.composition.length) fail(where, `side ${i} composition count differs`);
+  });
+  if (!z.terrain?.description || !z.terrain?.orientation) fail(where, "missing terrain text");
+  if ((z.terrain?.features || []).length !== b.terrain.features.length) fail(where, "feature label count differs");
+  for (const u of b.units) {
+    const zu = z.units?.[u.id];
+    if (!zu?.name || (u.description && !zu.description)) fail(where, `unit ${u.id} untranslated`);
+  }
+  for (const id of Object.keys(z.units || {})) if (!b.units.some((u) => u.id === id)) fail(where, `unknown unit ${id}`);
+  for (const f of b.figures) if (!z.figures?.[f.person]?.role) fail(where, `figure ${f.person} role untranslated`);
+  if (!z.strategy?.overview || (z.strategy.keyMoves || []).length !== b.strategy.keyMoves.length) fail(where, "strategy differs");
+  if ((z.phases || []).length !== b.phases.length) fail(where, "phase count differs");
+  b.phases.forEach((p, i) => {
+    const zp = z.phases?.[i] || {};
+    for (const f of ["title", "time", "summary", "narrative", "insight"]) if (p[f] && !zp[f]) fail(where, `phase ${i + 1} missing ${f}`);
+    if ((zp.arrows || []).length !== p.arrows.length) fail(where, `phase ${i + 1} arrow label count differs`);
+    if ((zp.overlays || []).length !== (p.overlays || []).length) fail(where, `phase ${i + 1} overlay label count differs`);
+  });
+  if (!z.aftermath?.outcome || z.aftermath.consequences?.length !== b.aftermath.consequences.length || z.aftermath.lessons?.length !== b.aftermath.lessons.length) fail(where, "aftermath differs");
+}
+for (const id of Object.keys(PEOPLE)) {
+  const z = ZH_PEOPLE[id];
+  if (!z?.name || !z.bio || !z.legacy || !z.life) fail("zh/people", `${id} untranslated`);
+}
+
 if (problems) { console.error(`${problems} problem(s)`); process.exit(1); }
 console.log("All curated battles OK.");

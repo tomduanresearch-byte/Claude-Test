@@ -118,6 +118,11 @@ export const BATTLE_SCHEMA = obj({
   sourceNotes: str,
 });
 
+// Appended to the request when the page is in Chinese.
+export const LANGUAGE_NOTE = {
+  zh: "Write every human-readable text field in Simplified Chinese (简体中文), in a clear, literary but plain register. Keep ids, enum values, side ids and unit ids in English. Give Chinese names of foreign people and places in their standard Chinese transliteration; in nativeName, give the battle's name in the original language if it is not Chinese, otherwise its English name.",
+};
+
 export const SYSTEM_PROMPT = `You are a military historian building an interactive, map-based walkthrough of a single historical battle for a curious learner. Your output drives an animated top-down battle map plus explanatory text, so it must be historically careful and spatially coherent.
 
 Content:

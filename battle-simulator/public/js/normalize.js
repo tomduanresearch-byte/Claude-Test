@@ -138,6 +138,8 @@ export function normalizeBattle(raw, { id, source, people = {} } = {}) {
     terrain: {
       description: text(terrain.description),
       orientation: text(terrain.orientation),
+      // The English orientation, kept for the compass when the text is translated.
+      compass: text(terrain.compass) || text(terrain.orientation),
       features: arr(terrain.features)
         .map((f) => ({ type: text(f.type), label: text(f.label), points: arr(f.points).filter((pt) => Array.isArray(pt) && pt.length >= 2) }))
         .filter((f) => f.points.length >= 2),

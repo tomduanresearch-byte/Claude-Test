@@ -1,4 +1,5 @@
 // Renders a battle onto an SVG map and animates units between phases.
+import { T } from "./i18n.js";
 const NS = "http://www.w3.org/2000/svg";
 const VW = 1000;
 const VH = 640;
@@ -79,7 +80,7 @@ export class BattleMap {
     const compass = el("g", { class: "compass", transform: `translate(${VW - 40} 40)` }, g);
     el("circle", { r: 18 }, compass);
     el("path", { d: "M0 -13 L5 3 L0 0 L-5 3 z" }, compass);
-    const up = compassUp(this.battle.terrain.orientation);
+    const up = T.compass[compassUp(this.battle.terrain.compass)];
     el("text", { y: -22 }, compass).textContent = up;
   }
 
@@ -287,7 +288,7 @@ function drawSymbol(g, type, w, h) {
     case "ships":
     case "camp": {
       const t = el("text", { class: "sym-text", "font-size": Math.max(7, Math.min(13, h - 2)) }, g);
-      t.textContent = { elephants: "ELE", chariots: "CHR", ships: "⚓", camp: "CAMP" }[type];
+      t.textContent = T.symbols[type];
       break;
     }
     case "artillery":

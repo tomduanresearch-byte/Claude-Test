@@ -24,6 +24,7 @@ export function searchBattles(battles, query, era) {
 function tokens(q) {
   return String(q).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
     .replace(/\b(the|of|battle|at|a|an|and|vs|versus)\b/g, " ")
+    .replace(/之战|之役|战役|会战|大战/g, " ")
     .split(/[^a-z0-9\u3400-\u9fff]+/).filter(Boolean);
 }
 

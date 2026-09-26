@@ -6,7 +6,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import Anthropic from "@anthropic-ai/sdk";
-import { BATTLE_SCHEMA, SYSTEM_PROMPT, describeProgress } from "./public/js/schema.js";
+import { BATTLE_SCHEMA, SYSTEM_PROMPT, LANGUAGE_NOTE, describeProgress } from "./public/js/schema.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const PUBLIC = path.join(here, "public");
@@ -63,9 +63,11 @@ async function generate(req, res) {
     res.writeHead(503, { "Content-Type": "application/json" });
     return res.end(JSON.stringify({ error: "Set ANTHROPIC_API_KEY to enable generation." }));
   }
-  let query;
+  let query, lang;
   try {
-    query = String((await readJson(req)).query || "").trim().slice(0, 300);
+    const body = await readJson(req);
+    query = String(body.query || "").trim().slice(0, 300);
+    lang = LANGUAGE_NOTE[body.lang] ? body.lang : "en";
   } catch {
     return send(res, 400, "Bad request");
   }
@@ -83,7 +85,7 @@ async function generate(req, res) {
       fallbacks: "default",
       thinking: { type: "adaptive" },
       output_config: { format: { type: "json_schema", schema: BATTLE_SCHEMA } },
-      system: SYSTEM_PROMPT,
+      system: lang === "en" ? SYSTEM_PROMPT : `${SYSTEM_PROMPT}\n\n${LANGUAGE_NOTE[lang]}`,
       messages: [{ role: "user", content: `Build the interactive walkthrough for: ${query}` }],
     });
 

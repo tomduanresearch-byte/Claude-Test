@@ -14,6 +14,15 @@ it phase by phase on an animated map. For each battle you get:
 3. **Aftermath**: losses against starting strength, consequences, lessons, and
    a note on how reliable the sources are.
 
+## Chinese edition
+
+`public/zh.html` is the same atlas in Simplified Chinese: the interface, every
+battle, every biography and the map labels. Translations live in
+`public/data/zh/` as overlays on the English files, holding only the text, so
+unit positions stay in one place. `npm run check` verifies that every overlay
+lines up with its original and translates every field. Battles generated from
+the Chinese page are written in Chinese.
+
 ## The library
 
 Fifteen battles are hand-written and work offline. Each one comes with short
@@ -66,7 +75,7 @@ ANTHROPIC_API_KEY=sk-ant-... npm start     # with generation
 npm start                                  # library only
 ```
 
-Then open <http://localhost:5173>. The server uses `claude-opus-5` by default.
+Then open <http://localhost:5173> (English) or <http://localhost:5173/zh.html> (中文). The server uses `claude-opus-5` by default.
 Set `BATTLE_MODEL` to use a different model, and `PORT` to use a different
 port.
 
@@ -84,6 +93,9 @@ public/
   js/search.js            search scoring and year matching
   data/*.js               the curated battles
   data/people.js          biographies shared across battles
+  data/zh/                Simplified Chinese translations (overlays on the English data)
+  js/i18n.js              interface strings, number and year formats, translation merging
+  zh.html                 the Chinese edition's page
 scripts/check-data.js     `npm run check`: validates every curated battle
 ```
 
