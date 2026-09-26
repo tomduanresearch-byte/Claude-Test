@@ -1,61 +1,62 @@
 :root {
-  --bg: #f6f1e7;
-  --surface: #fffdf8;
-  --surface-2: #efe7d6;
-  --ink: #221d16;
-  --ink-2: #5b5245;
-  --ink-3: #8a7f6e;
-  --line: #ddd2bd;
-  --accent: #9c2b25;
+  --bg: #eceee7;
+  --surface: #f8f9f5;
+  --surface-2: #e0e5dc;
+  --ink: #18212b;
+  --ink-2: #46505c;
+  --ink-3: #75808c;
+  --line: #cdd4c9;
+  --accent: #1f4d6b;
   --accent-ink: #fff;
-  --focus: #2f5fb3;
-  --map-ground: #ece2c9;
-  --map-grid: rgba(90, 70, 40, 0.07);
-  --map-river: #6f9fc4;
-  --map-river-bank: #c9dbe6;
-  --map-water: #a9c7dc;
-  --map-hill: #d9c7a0;
-  --map-hill-inner: #cdb688;
-  --map-forest: #b5c69a;
-  --map-tree: #7f9a63;
-  --map-marsh: #c8d3b4;
-  --map-town: #c9b9a2;
-  --map-road: #a08f73;
-  --map-label: #6d5f49;
+  --focus: #1f6fb3;
+  --map-ground: #e8ebdc;
+  --map-grid: rgba(40, 70, 60, 0.08);
+  --map-river: #5b8fb8;
+  --map-river-bank: #c5d8e3;
+  --map-water: #a6c4d8;
+  --map-hill: #d8cfae;
+  --map-hill-inner: #c9bc92;
+  --map-forest: #b3c79c;
+  --map-tree: #6f8f58;
+  --map-marsh: #c6d3b7;
+  --map-town: #c7c0ad;
+  --map-road: #93886f;
+  --map-label: #5d5a48;
   --unit-stroke: rgba(20, 15, 10, 0.75);
   --unit-mark: rgba(255, 255, 255, 0.9);
   --shadow: 0 1px 2px rgba(60, 40, 10, 0.06), 0 4px 16px rgba(60, 40, 10, 0.06);
   --radius: 12px;
-  --serif: "Fraunces", Georgia, "Times New Roman", serif;
-  --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --cond: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #16140f;
-    --surface: #1f1c16;
-    --surface-2: #2a261e;
-    --ink: #f1eadc;
-    --ink-2: #c3b8a3;
-    --ink-3: #8f8573;
-    --line: #3a3429;
-    --accent: #e0625a;
-    --accent-ink: #1a0f0d;
-    --focus: #8fb2ff;
-    --map-ground: #2b271f;
-    --map-grid: rgba(255, 240, 210, 0.05);
+    --bg: #11161b;
+    --surface: #182028;
+    --surface-2: #212b35;
+    --ink: #e6ebef;
+    --ink-2: #b3bdc6;
+    --ink-3: #85909b;
+    --line: #2d3843;
+    --accent: #7fb3d5;
+    --accent-ink: #0c1620;
+    --focus: #8fc1ff;
+    --map-ground: #242a24;
+    --map-grid: rgba(220, 240, 230, 0.05);
     --map-river: #4f86b3;
-    --map-river-bank: #2c4150;
-    --map-water: #2c4a61;
-    --map-hill: #4a4030;
-    --map-hill-inner: #574b37;
-    --map-forest: #33412a;
+    --map-river-bank: #2a3f4d;
+    --map-water: #2a4659;
+    --map-hill: #444030;
+    --map-hill-inner: #524c37;
+    --map-forest: #2f4029;
     --map-tree: #4f6a3c;
-    --map-marsh: #34402e;
-    --map-town: #4a4238;
-    --map-road: #6e6250;
-    --map-label: #b4a78e;
+    --map-marsh: #33402e;
+    --map-town: #45423a;
+    --map-road: #6e6752;
+    --map-label: #b1ae98;
     --unit-stroke: rgba(0, 0, 0, 0.8);
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
     color-scheme: dark;
@@ -63,11 +64,8 @@
 }
 
 :root[data-theme="dark"] {
-  --bg: #16140f; --surface: #1f1c16; --surface-2: #2a261e; --ink: #f1eadc; --ink-2: #c3b8a3; --ink-3: #8f8573;
-  --line: #3a3429; --accent: #e0625a; --accent-ink: #1a0f0d; --focus: #8fb2ff; --map-ground: #2b271f;
-  --map-grid: rgba(255, 240, 210, 0.05); --map-river: #4f86b3; --map-river-bank: #2c4150; --map-water: #2c4a61;
-  --map-hill: #4a4030; --map-hill-inner: #574b37; --map-forest: #33412a; --map-tree: #4f6a3c; --map-marsh: #34402e;
-  --map-town: #4a4238; --map-road: #6e6250; --map-label: #b4a78e; --unit-stroke: rgba(0, 0, 0, 0.8);
+  --bg: #11161b; --surface: #182028; --surface-2: #212b35; --ink: #e6ebef; --ink-2: #b3bdc6; --ink-3: #85909b; --line: #2d3843; --accent: #7fb3d5; --accent-ink: #0c1620; --focus: #8fc1ff; --map-ground: #242a24; --map-grid: rgba(220, 240, 230, 0.05); --map-river: #4f86b3; --map-river-bank: #2a3f4d; --map-water: #2a4659; --map-hill: #444030; --map-hill-inner: #524c37; --map-forest: #2f4029; --map-tree: #4f6a3c; --map-marsh: #33402e; --map-town: #45423a; --map-road: #6e6752; --map-label: #b1ae98;
+  --unit-stroke: rgba(0, 0, 0, 0.8);
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 4px 16px rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }
@@ -90,7 +88,8 @@ code { font-size: 0.9em; background: var(--surface-2); padding: 0.1em 0.35em; bo
 :focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
 .eyebrow {
-  font-size: 0.75rem;
+  font-family: var(--cond);
+  font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -109,7 +108,7 @@ code { font-size: 0.9em; background: var(--surface-2); padding: 0.1em 0.35em; bo
   border-bottom: 1px solid var(--line);
   background: var(--bg);
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 10;
 }
 .brand {
@@ -121,7 +120,7 @@ code { font-size: 0.9em; background: var(--surface-2); padding: 0.1em 0.35em; bo
   font-size: 1.15rem;
   text-decoration: none;
 }
-.brand svg { width: 22px; height: 22px; stroke: var(--accent); stroke-width: 4; stroke-linecap: round; }
+.brand svg { width: 22px; height: 22px; stroke: #b3312c; stroke-width: 4; stroke-linecap: round; }
 .topbar-note { font-size: 0.8rem; color: var(--ink-3); }
 
 main { max-width: 1320px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 4rem; }
@@ -344,7 +343,7 @@ main { max-width: 1320px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px) 4rem
   box-shadow: var(--shadow);
   scroll-margin-top: 80px;
 }
-.map-svg { display: block; width: 100%; height: auto; font-family: var(--sans); }
+.map-svg { display: block; width: 100%; height: auto; font-family: var(--cond); }
 .legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-size: 0.82rem; color: var(--ink-2); margin: 0.6rem 0.2rem 0; }
 .legend-note { color: var(--ink-3); margin-left: auto; }
 .controls { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.75rem; flex-wrap: wrap; }
